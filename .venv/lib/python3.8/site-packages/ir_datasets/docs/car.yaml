@@ -1,0 +1,102 @@
+_:
+  pretty_name: 'TREC CAR'
+  desc: '
+<p>
+An ad-hoc passage retrieval collection, constructed from Wikipedia and used as the basis of the
+TREC Complex Answer Retrieval (CAR) task.
+</p>
+'
+
+v1.5:
+  desc: '
+<p>
+Version 1.5 of the TREC dataset. This version is used for year 1 (2017) of the TREC CAR shared task.
+</p>
+'
+  bibtex_ids: ['Dietz2017Car']
+
+v1.5/trec-y1:
+  desc: '
+<p>
+Official test set of TREC CAR 2017 (year 1).
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/trec-y1/manual:
+  desc: '
+<p>
+Official test set of TREC CAR 2017 (year 1), using manual graded relevance judgments.
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/trec-y1/auto:
+  desc: '
+<p>
+Official test set of TREC CAR 2017 (year 1), using automatic relevance judgments (assumed from
+hierarchical structure of pages, i.e., paragraphs under a header are assumed relevant.)
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/test200:
+  desc: '
+<p>
+Un-official test set consisting of manually-selected articles. Sometimes used as a validation set.
+</p>
+'
+  bibtex_ids: ['Nanni2017BenchmarkCar', 'Dietz2017Car']
+
+v1.5/train/fold0:
+  desc: '
+<p>
+Fold 0 of the official large training set for TREC CAR 2017. Relevance assumed from hierarchical structure of
+pages (i.e., paragraphs under a header are assumed relevant.)
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/train/fold1:
+  desc: '
+<p>
+Fold 1 of the official large training set for TREC CAR 2017. Relevance assumed from hierarchical structure of
+pages (i.e., paragraphs under a header are assumed relevant.)
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/train/fold2:
+  desc: '
+<p>
+Fold 2 of the official large training set for TREC CAR 2017. Relevance assumed from hierarchical structure of
+pages (i.e., paragraphs under a header are assumed relevant.)
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/train/fold3:
+  desc: '
+<p>
+Fold 3 of the official large training set for TREC CAR 2017. Relevance assumed from hierarchical structure of
+pages (i.e., paragraphs under a header are assumed relevant.)
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v1.5/train/fold4:
+  desc: '
+<p>
+Fold 4 of the official large training set for TREC CAR 2017. Relevance assumed from hierarchical structure of
+pages (i.e., paragraphs under a header are assumed relevant.)
+</p>
+'
+  bibtex_ids: ['Dietz2017TrecCar', 'Dietz2017Car']
+
+v2.0:
+  desc: '
+<p>
+Version 2.0 of the TREC CAR dataset.
+</p>
+'
+  bibtex_ids: ['Dietz2017Car']

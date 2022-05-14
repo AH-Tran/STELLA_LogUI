@@ -1,0 +1,79 @@
+_:
+  pretty_name: 'MSMARCO (passage, version 2)'
+  desc: '
+  <p>
+Version 2 of the MS MARCO passage ranking dataset. The corpus contains 138M passages,
+which can be linked up with documents in <a class="ds-ref">msmarco-document-v2</a>.
+</p>
+<ul>
+  <li>Version 1 of dataset: <a class="ds-ref">msmarco-passage</a></li>
+  <li>Documents: Text extracted from web pages</li>
+  <li>Queries: Natural language questions (from query log)</li>
+  <li><a href="https://arxiv.org/abs/1611.09268">Dataset Paper</a></li>
+</ul>
+<p>
+Change Log
+</p>
+<ul>
+<li>
+On July 21, 2021, the task organizers <a href="https://github.com/microsoft/msmarco/commit/41b3a684ed8ebd4e753250c3687547a77c62e7dd">
+updated the train, dev1, and dev2 qrels</a> to remove duplicate entries from the files. This should not have change results from
+evaluation tools, but may result in non-repeatable results if these files were used in another process (e.g., model training). The
+original qrels file for <a class="ds-ref">msmarco-passage-v2/train</a> can be found
+<a href="https://mirror.ir-datasets.com/abf1fd024b6aca203364d2138c241a6d">here</a> to aid in result repeatability.
+</li>
+</ul>'
+  bibtex_ids: ['Bajaj2016Msmarco']
+
+
+dev1:
+  desc: '
+<p>
+Official dev1 set with 3,903 queries.
+</p>
+<p>
+Note that that qrels in this dataset are not directly human-assessed; labels from <a class="ds-ref">msmarco-passage</a>
+are mapped to documents via URL, these documents are re-passaged, and then the best approximate match is identified.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+dev2:
+  desc: '
+<p>
+Official dev2 set with 4,281 queries.
+</p>
+<p>
+Note that that qrels in this dataset are not directly human-assessed; labels from <a class="ds-ref">msmarco-passage</a>
+are mapped to documents via URL, these documents are re-passaged, and then the best approximate match is identified.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+train:
+  desc: '
+<p>
+Official train set with 277,144 queries.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+trec-dl-2021:
+  desc: '
+<p>
+Official topics for the TREC Deep Learning (DL) 2021 shared task.
+</p>
+'
+  official_measures: ['AP@100', 'nDCG@10', 'P(rel=2)@10', 'RR(rel=2)']
+
+trec-dl-2021/judged:
+  desc: '
+<p>
+<a class="ds-ref">msmarco-passage-v2/trec-dl-2021</a>, but filtered down to the 53 queries
+with qrels.
+</p>
+'
+  official_measures: ['AP@100', 'nDCG@10', 'P(rel=2)@10', 'RR(rel=2)']

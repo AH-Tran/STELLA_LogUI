@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: pyautocorpus
+Version: 0.1.8
+Summary: UNKNOWN
+Home-page: https://github.com/seanmacavaney/pyautocorpus
+Author: Sean MacAvaney
+Author-email: sean.macavaney@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# PyAutoCorpus
+
+A python interface to the excellent [AutoCorpus](https://github.com/mpacula/AutoCorpus) library.
+
+Right now, it only supports the wiki markup `textify` function, which strips out
+markup. From my benchmarks, this ends up being \~40x faster than methods to strip
+markup using other libraries:
+
+```bash
+mwparserfromhell 0.208 sec/doc
+wikitextparser 0.215 sec/doc
+pyautocorpus 0.005 sec/doc
+```
+
+where:
+ - `mwparserfromhell` is `mwparserfromhell.parse(x).strip_code()`
+ - `wikitextparser` is `wikitextparser.parse(x).plain_text()`
+ - `pyautocorpus` is `pyautocorpus.Textifier().textify(x)`
+
+## Installing
+
+### From pypi:
+
+```bash
+pip install pyautocorpus
+```
+
+### From source:
+
+Be sure to clone recursively:
+
+```bash
+git clone --recursive https://github.com/seanmacavaney/pyautocorpus.git
+```
+
+You will first need the `pcre` library installed.
+
+```bash
+python setup.py install
+```
+
+## Usage
+
+Example:
+
+```python
+import pyautocorpus
+textifier = pyautocorpus.Textifier()
+textifier.textify("==Wiki Marked up text==\n [[Some Page|link text]] example.")
+'Wiki Marked up text\n\n\n link text example.'
+```
+
+## Known issues
+
+ - Windows is not yet supported
+
+## Credits
+
+[AutoCorpus](https://github.com/mpacula/AutoCorpus)
+
+Contributors to this repository:
+
+ - Sean MacAvaney (University of Glasgow)
+ - Thomas Jänich (University of Glasgow)
+
+

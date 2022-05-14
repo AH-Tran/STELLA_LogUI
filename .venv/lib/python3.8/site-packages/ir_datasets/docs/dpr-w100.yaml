@@ -1,0 +1,65 @@
+_:
+  pretty_name: 'DPR Wiki100'
+  desc: '
+<p>
+A wikipedia dump from 20 December, 2018, split into passages of 100 words. Used in experiments
+in the DPR paper (and other subsequent works) for retrieval experiments over Q&amp;A collections.
+</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2004.04906.pdf">Dataset paper</a></li>
+<li><a href="https://github.com/facebookresearch/DPR">Repository</a></li>
+</ul>
+'
+  bibtex_ids: ['Karpukhin2020Dpr']
+
+natural-questions/train:
+  desc: '
+<p>
+Training subset from the Natural Questions Q&amp;A collection. This differs from the
+<a class="ds-ref">natural-questions/train</a> dataset in that it uses the full Wikipedia dump
+and additional filtering (described in the DPR paper) was applied.
+</p>
+<ul>
+<li>See also: <a class="ds-ref">natural-questions</a></li>
+</ul>
+'
+  bibtex_ids: ['Kwiatkowski2019Nq', 'Karpukhin2020Dpr']
+
+natural-questions/dev:
+  desc: '
+<p>
+Dev subset from the Natural Questions Q&amp;A collection. This differs from the
+<a class="ds-ref">natural-questions/dev</a> dataset in that it uses the full Wikipedia dump
+and additional filtering (described in the DPR paper) was applied.
+</p>
+<ul>
+<li>See also: <a class="ds-ref">natural-questions</a></li>
+</ul>
+'
+  bibtex_ids: ['Kwiatkowski2019Nq', 'Karpukhin2020Dpr']
+
+trivia-qa/train:
+  desc: '
+<p>
+Training subset from the Trivia QA dataset. Differing from the official Trivia QA collection,
+this uses the DPR Wikipedia dump as the source collection. Refer to the DPR paper for more details.
+</p>
+<ul>
+<li><a href="https://www.aclweb.org/anthology/P17-1147.pdf">Dataset paper</a></li>
+<li><a href="http://nlp.cs.washington.edu/triviaqa/">Dataset website</a></li>
+</ul>
+'
+  bibtex_ids: ['Joshi2017TriviaQA', 'Karpukhin2020Dpr']
+
+trivia-qa/dev:
+  desc: '
+<p>
+Dev subset from the Trivia QA dataset. Differing from the official Trivia QA collection,
+this uses the DPR Wikipedia dump as the source collection. Refer to the DPR paper for more details.
+</p>
+<ul>
+<li><a href="https://www.aclweb.org/anthology/P17-1147.pdf">Dataset paper</a></li>
+<li><a href="http://nlp.cs.washington.edu/triviaqa/">Dataset website</a></li>
+</ul>
+'
+  bibtex_ids: ['Joshi2017TriviaQA', 'Karpukhin2020Dpr']

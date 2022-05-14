@@ -1,0 +1,3 @@
+[console_scripts]
+ir_datasets = ir_datasets:main_cli
+

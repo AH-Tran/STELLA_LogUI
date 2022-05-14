@@ -1,0 +1,53 @@
+_:
+  pretty_name: 'TREC Arabic'
+  desc: '
+<p>
+A collection of news articles in Arabic, used for multi-lingual evaluation in TREC 2001 and TREC
+2002.
+</p>
+<p>
+Document collection from <a href="https://catalog.ldc.upenn.edu/LDC2001T55">LDC2001T55</a>.
+</p>
+'
+  docs_instructions: &inst "docs available from LDC"
+  bibtex_ids: ['Graff2001Arabic']
+  data_access: '
+<p>
+To use this dataset, you need a copy of the source corpus, provided by the the
+Linguistic Data Consortium. The specific resource needed
+is <a href="https://catalog.ldc.upenn.edu/LDC2001T55">LDC2001T55</a>.
+</p>
+<p>
+Many organizations already have a subscription to the LDC, so access to the collection
+can be as easy as confirming the data usage agreement and downloading the corpus. Check
+with your library for access details.
+</p>
+<p>
+The source file is: <kbd>arabic_newswire_a_LDC2001T55.tgz</kbd>.
+</p>
+<p>
+ir_datasets expects this file to be copied/linked as <kbd>~/.ir_datasets/trec-arabic/corpus.tgz</kbd>.
+</p>
+'
+
+ar2001:
+  desc: '
+<p>
+Arabic benchmark from TREC 2001.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/pubs/trec10/papers/clirtrack.pdf">Task Overview Paper</a></li>
+</ul>'
+  docs_instructions: *inst
+  bibtex_ids: ['Gey2001Arabic', 'Graff2001Arabic']
+
+ar2002:
+  desc: '
+<p>
+Arabic benchmark from TREC 2002.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/pubs/trec11/papers/OVERVIEW.gey.ps.gz">Task Overview Paper</a></li>
+</ul>'
+  docs_instructions: *inst
+  bibtex_ids: ['Gey2002Arabic', 'Graff2001Arabic']

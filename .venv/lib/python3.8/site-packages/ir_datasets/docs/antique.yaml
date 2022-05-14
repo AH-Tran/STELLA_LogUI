@@ -1,0 +1,56 @@
+_:
+  pretty_name: 'ANTIQUE'
+  desc: '
+<p>
+"ANTIQUE is a non-factoid quesiton answering dataset based on the questions and answers of Yahoo!
+Webscope L6."
+</p>
+<ul>
+  <li>Documents: Short answer passages (from Yahoo Answers)</li>
+  <li>Queries: Natural language questions (from Yahoo Answers)</li>
+  <li><a href="https://arxiv.org/abs/1905.08957">Dataset Paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Hashemi2020Antique']
+
+train:
+  desc: '
+<p>
+Official train set of the ANTIQUE dataset.
+</p>'
+  bibtex_ids: ['Hashemi2020Antique']
+
+
+train/split200-train:
+  desc: '
+<p>
+<a class="ds-ref">antique/train</a> without the 200 queries used by
+<a class="ds-ref">antique/train/split200-valid</a>.
+</p>'
+  bibtex_ids: ['Hashemi2020Antique']
+
+
+train/split200-valid:
+  desc: '
+<p>
+A held-out subset of 200 queries from <a class="ds-ref">antique/train</a>. Use in conjunction with
+<a class="ds-ref">antique/train/split200-train</a>.
+</p>'
+  bibtex_ids: ['Hashemi2020Antique']
+
+
+test:
+  desc: '
+<p>
+Official test set of the ANTIQUE dataset.
+</p>'
+  bibtex_ids: ['Hashemi2020Antique']
+
+
+test/non-offensive:
+  desc: '
+<p>
+<a class="ds-ref">antique/test</a> without a set of queries deemed by the authors of ANTIQUE to be
+"offensive (and noisy)."
+</p>'
+  bibtex_ids: ['Hashemi2020Antique']

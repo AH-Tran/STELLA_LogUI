@@ -1,0 +1,54 @@
+_:
+  pretty_name: 'TREC Mandarin'
+  desc: '
+<p>
+A collection of news articles in Mandarin in Simplified Chinese, used for multi-lingual evaluation in TREC 5 and
+TREC 6.
+</p>
+<p>
+Document collection from <a href="https://catalog.ldc.upenn.edu/LDC2000T52">LDC2000T52</a>.
+</p>
+'
+  docs_instructions: &inst "docs available from LDC"
+  bibtex_ids: ['Rogers2000Mandarin']
+  data_access: '
+<p>
+To use this dataset, you need a copy of the source corpus, provided by the the
+Linguistic Data Consortium. The specific resource needed
+is <a href="https://catalog.ldc.upenn.edu/LDC2000T52">LDC2000T52</a>.
+</p>
+<p>
+Many organizations already have a subscription to the LDC, so access to the collection
+can be as easy as confirming the data usage agreement and downloading the corpus. Check
+with your library for access details.
+</p>
+<p>
+The source file is: <kbd>LDC2000T52.tgz</kbd>.
+</p>
+<p>
+ir_datasets expects this file to be copied/linked as <kbd>~/.ir_datasets/trec-mandarin/corpus.tgz</kbd>.
+</p>
+'
+
+trec5:
+  desc: '
+<p>
+Mandarin Chinese benchmark from TREC 5.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/pubs/trec5/papers/multilingual_track.ps.gz">Task Overview Paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Harman1997Chinese', 'Rogers2000Mandarin']
+
+trec6:
+  desc: '
+<p>
+Mandarin Chinese benchmark from TREC 6.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/pubs/trec6/papers/csiro.chinese.ps.gz">Task Overview Paper</a></li>
+</ul>'
+  docs_instructions: *inst
+  bibtex_ids: ['Wilkinson1998Chinese', 'Rogers2000Mandarin']

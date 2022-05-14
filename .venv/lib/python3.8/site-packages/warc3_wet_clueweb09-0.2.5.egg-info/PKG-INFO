@@ -1,0 +1,95 @@
+Metadata-Version: 1.1
+Name: warc3-wet-clueweb09
+Version: 0.2.5
+Summary: Python library to work with ARC and WARC files, with fixes for ClueWeb09
+Home-page: https://github.com/seanmacavaney/warc3-clueweb
+Author: Anand Chitipothu, Noufal Ibrahim, Ryan Chartier, Jan Pieter Bruins Slot, Almer S. Tigelaar, Willian Zhang
+Author-email: info@archive.org
+License: GPLv2
+Description: warc3-wet: Python3 library to work with WARC and WET files
+        ==========================================================
+        
+        Note: This is a fork of the original (now dead) warc repository.
+        
+        Updated to handle problems with the ClueWeb09_ files.
+        
+        .. _ClueWeb09: https://lemurproject.org/clueweb09/
+        
+        Changes are based on this repository_ (which only supports python2)
+        
+        .. _repository: https://github.com/cdegroc/warc-clueweb/blob/clueweb09/warc/warc.py
+        
+        WARC (Web ARChive) is a file format for storing web crawls.
+        
+        http://bibnum.bnf.fr/WARC/ 
+        
+        This `warc` library makes it very easy to work with WARC files.::
+        
+            import warc
+            with warc.open("test.warc") as f:
+                for record in f:
+                    print(record['WARC-Target-URI'], record['Content-Length'])
+        
+        And WET files.::
+        
+            import warc
+            with warc.open("test.warc.wet") as f:
+                for record in f:
+                    print(record['WARC-Target-URI'], record['Content-Length'])
+        
+        Documentation
+        -------------
+        
+        The documentation of the warc library is available at http://warc.readthedocs.org/.
+        
+        Apart from the install from pip, which will not work for this warc3 version, the
+        interface as described there is unchanged.
+        	
+        License
+        -------
+        
+        This software is licensed under GPL v2. See LICENSE_ file for details.
+        
+        .. LICENSE: http://github.com/internetarchive/warc/blob/master/LICENSE
+        
+        Authors
+        -------
+        
+        Original Python2 Versions:
+        
+        * Anand Chitipothu
+        * Noufal Ibrahim
+        
+        Python3 Port:
+        
+        * Ryan Chartier 
+        * Jan Pieter Bruins Slot
+        * Almer S. Tigelaar
+        
+        Modification
+        * Willian Zhang
+        
+        Change Log
+        ----------
+        0.2.5
+        replace utf8 errors in headers
+        
+        0.2.4
+        support ClueWeb09
+        
+        0.2.3
+        Support seeking in WARC/WET
+        
+        0.2.2
+        Allow WET parse
+        
+        older...
+        see https://github.com/internetarchive/warc
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

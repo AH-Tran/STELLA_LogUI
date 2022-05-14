@@ -1,0 +1,149 @@
+_:
+  pretty_name: 'CORD-19'
+  desc: '
+<p>
+Collection of scientific articles related to COVID-19.
+</p>
+<p>
+Uses the 2020-07-16 version of the dataset, corresponding to the "complete" collection used for
+TREC COVID.
+</p>
+<p>
+Note that this version of the document collection only provides article meta-data. To get the full
+text, use <a class="ds-ref">cord19/fulltext</a>.
+</p>
+<ul>
+<li><a href="https://www.semanticscholar.org/cord19">Document collection site</a></li>
+</ul>
+'
+  bibtex_ids: ['Wang2020Cord19']
+
+
+trec-covid:
+  desc: '
+<p>
+The Complete TREC COVID collection. Queries related to COVID-19, including deep relevance judgments.
+</p>
+<ul>
+<li><a href="https://ir.nist.gov/covidSubmit/index.html">Shared task site</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/papers/Forum_TRECCOVID1.pdf">Shared task paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+fulltext:
+  desc: '
+<p>
+Version of <a class="ds-ref">cord19</a> dataset that includes article full texts.
+This dataset takes longer to load than the version that only includes article meata-data.
+</p>
+'
+  bibtex_ids: ['Wang2020Cord19']
+
+fulltext/trec-covid:
+  desc: '
+<p>
+Version of <a class="ds-ref">cord19/trec-covid</a> dataset that includes article full texts.
+This dataset takes longer to load than the version that only includes article meata-data.
+</p>
+<p>
+Queries and qrels are the same as <a class="ds-ref">cord19/trec-covid</a>; it just uses the
+extended documents from <a class="ds-ref">cord19/fulltext</a>.
+</p>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+round1:
+  desc: '
+<p>
+Version of <a class="ds-ref">cord19</a> dataset from 2020-04-10 with only documents used for
+the first round of the TREC COVID shared task.
+</p>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+trec-covid/round1:
+  desc: '
+<p>
+Round 1 of the TREC COVID task. Includes 30 queries related to COVID-19. This uses the "2020-04-10"
+version of the collection.
+</p>
+<ul>
+<li><a href="https://ir.nist.gov/covidSubmit/round1.html">Round 1 Guidelines</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/index.html">Shared task site</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/papers/Forum_TRECCOVID1.pdf">Shared task paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+trec-covid/round2:
+  desc: '
+<p>
+Round 2 of the TREC COVID task. Includes 35 queries related to COVID-19. This uses the "2020-05-01"
+version of the collection.
+</p>
+<p>
+Note that the qrels do not contain results from the prior round(s). Use the "complete"
+version for this setting (<a class="ds-ref">cord19/trec-covid</a>).
+</p>
+<ul>
+<li><a href="https://ir.nist.gov/covidSubmit/round2.html">Round 2 Guidelines</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/index.html">Shared task site</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/papers/Forum_TRECCOVID1.pdf">Shared task paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+trec-covid/round3:
+  desc: '
+<p>
+Round 3 of the TREC COVID task. Includes 40 queries related to COVID-19. This uses the "2020-05-19"
+version of the collection.
+</p>
+<p>
+Note that the qrels do not contain results from the prior round(s). Use the "complete"
+version for this setting (<a class="ds-ref">cord19/trec-covid</a>).
+</p>
+<ul>
+<li><a href="https://ir.nist.gov/covidSubmit/round3.html">Round 3 Guidelines</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/index.html">Shared task site</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/papers/Forum_TRECCOVID1.pdf">Shared task paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+trec-covid/round4:
+  desc: '
+<p>
+Round 4 of the TREC COVID task. Includes 45 queries related to COVID-19. This uses the "2020-06-19"
+version of the collection.
+</p>
+<p>
+Note that the qrels do not contain results from the prior round(s). Use the "complete"
+version for this setting (<a class="ds-ref">cord19/trec-covid</a>).
+</p>
+<ul>
+<li><a href="https://ir.nist.gov/covidSubmit/round4.html">Round 4 Guidelines</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/index.html">Shared task site</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/papers/Forum_TRECCOVID1.pdf">Shared task paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']
+
+trec-covid/round5:
+  desc: '
+<p>
+Round 5 of the TREC COVID task. Includes 50 queries related to COVID-19. This uses the "2020-07-16"
+version of the collection.
+</p>
+<p>
+Note that the qrels do not contain results from the prior round(s). Use the "complete"
+version for this setting (<a class="ds-ref">cord19/trec-covid</a>).
+</p>
+<ul>
+<li><a href="https://ir.nist.gov/covidSubmit/round5.html">Round 5 Guidelines</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/index.html">Shared task site</a></li>
+<li><a href="https://ir.nist.gov/covidSubmit/papers/Forum_TRECCOVID1.pdf">Shared task paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Voorhees2020TrecCovid', 'Wang2020Cord19']

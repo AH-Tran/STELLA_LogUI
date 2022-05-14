@@ -1,0 +1,52 @@
+_:
+  pretty_name: 'TREC Spanish'
+  desc: '
+<p>
+A collection of news articles in Spanish, used for multi-lingual evaluation in TREC 3 and TREC 4.
+</p>
+<p>
+Document collection from <a href="https://catalog.ldc.upenn.edu/LDC2000T51">LDC2000T51</a>.
+</p>
+'
+  docs_instructions: &inst "docs available from LDC"
+  bibtex_ids: ['Rogers2000Spanish']
+  data_access: '
+<p>
+To use this dataset, you need a copy of the source corpus, provided by the the
+Linguistic Data Consortium. The specific resource needed
+is <a href="https://catalog.ldc.upenn.edu/LDC2000T51">LDC2000T51</a>.
+</p>
+<p>
+Many organizations already have a subscription to the LDC, so access to the collection
+can be as easy as confirming the data usage agreement and downloading the corpus. Check
+with your library for access details.
+</p>
+<p>
+The source file is: <kbd>LDC2000T51.tgz</kbd>.
+</p>
+<p>
+ir_datasets expects this file to be copied/linked as <kbd>~/.ir_datasets/trec-spanish/corpus.tgz</kbd>.
+</p>
+'
+
+trec3:
+  desc: '
+<p>
+Spanish benchmark from TREC 3.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/pubs/trec3/papers/overview.pdf">Task Overview Paper</a></li>
+</ul>'
+  docs_instructions: *inst
+  bibtex_ids: ['Harman1994Trec3', 'Rogers2000Spanish']
+
+trec4:
+  desc: '
+<p>
+Spanish benchmark from TREC 4.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/pubs/trec4/overview.ps.gz">Task Overview Paper</a></li>
+</ul>'
+  docs_instructions: *inst
+  bibtex_ids: ['Harman1995Trec4', 'Rogers2000Spanish']

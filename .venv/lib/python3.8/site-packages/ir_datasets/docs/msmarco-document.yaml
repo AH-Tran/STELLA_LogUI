@@ -1,0 +1,189 @@
+_:
+  pretty_name: 'MSMARCO (document)'
+  desc: '
+  <p>
+"Based the questions in the [MS-MARCO] Question Answering Dataset and the documents which answered
+the questions a document ranking task was formulated. There are 3.2 million documents and the goal
+is to rank based on their relevance. Relevance labels are derived from what passages was marked as
+having the answer in the QnA dataset."
+</p>
+<ul>
+  <li>See also: <a class="ds-ref">msmarco-passage</a></li>
+  <li>Documents: Text extracted from web pages</li>
+  <li>Queries: Natural language questions (from query log)</li>
+  <li><a href="https://microsoft.github.io/msmarco/#docranking">Leaderboard</a></li>
+  <li><a href="https://arxiv.org/abs/1611.09268">Dataset Paper</a></li>
+</ul>'
+  bibtex_ids: ['Bajaj2016Msmarco']
+
+
+dev:
+  desc: '
+<p>
+Official dev set. All queries have exactly 1 (positive) relevance judgment.
+</p>
+<p>
+scoreddocs are the top 100 results from Indri QL. These are used for the "re-ranking" setting.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+eval:
+  desc: '
+<p>
+Official eval set for submission to MS MARCO leaderboard. Relevance judgments are hidden.
+</p>
+<p>
+scoreddocs are the top 100 results from Indri QL. These are used for the "re-ranking" setting.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+orcas:
+  desc: '
+<p>
+"ORCAS is a click-based dataset associated with the TREC Deep Learning Track. It covers 1.4 million of the TREC DL documents, providing 18 million connections to 10 million distinct queries."
+</p>
+<ul>
+<li>Queries: From query log</li>
+<li>Relevance Data: User clicks</li>
+<li>Scored docs: Indri Query Likelihood model</li>
+<li><a href="https://arxiv.org/abs/2006.05324">Dataset Paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Craswell2020Orcas']
+  official_measures: ['RR', 'nDCG']
+
+
+train:
+  desc: '
+<p>
+Official train set. All queries have exactly 1 (positive) relevance judgment.
+</p>
+<p>
+scoreddocs are the top 100 results from Indri QL. These are used for the "re-ranking" setting.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+trec-dl-2019:
+  desc: '
+<p>
+Queries from the TREC Deep Learning (DL) 2019 shared task, which were sampled from
+<a class="ds-ref">msmarco-document/eval</a>. A subset of these queries were judged by NIST assessors,
+(filtered list available in <a class="ds-ref">msmarco-document/trec-dl-2019/judged</a>).
+</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2003.07820.pdf">Shared Task Paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Craswell2019TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR', 'MAP']
+
+
+trec-dl-2019/judged:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-document/trec-dl-2019</a>, only including queries with qrels.
+</p>
+'
+  bibtex_ids: ['Craswell2019TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR', 'MAP']
+
+
+trec-dl-2020:
+  desc: '
+<p>
+Queries from the TREC Deep Learning (DL) 2020 shared task, which were sampled from
+<a class="ds-ref">msmarco-document/eval</a>. A subset of these queries were judged by NIST assessors,
+(filtered list available in <a class="ds-ref">msmarco-document/trec-dl-2020/judged</a>).
+</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2102.07662.pdf">Shared Task Paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Craswell2020TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR', 'MAP']
+
+trec-dl-2020/judged:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-document/trec-dl-2020</a>, only including queries with qrels.
+</p>
+'
+  bibtex_ids: ['Craswell2020TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR', 'MAP']
+
+trec-dl-hard:
+  desc: '
+<p>
+A more challenging subset of <a class="ds-ref">msmarco-document/trec-dl-2019</a> and <a class="ds-ref">msmarco-document/trec-dl-2020</a>.
+</p>
+<ul>
+<li><a href="https://github.com/grill-lab/DL-Hard">data website</a></li>
+<li>See Also: <a class="ds-ref">msmarco-passage/trec-dl-hard</a></li>
+</ul>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold1:
+  desc: '
+<p>
+Fold 1 of <a class="ds-ref">msmarco-document/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold2:
+  desc: '
+<p>
+Fold 2 of <a class="ds-ref">msmarco-document/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold3:
+  desc: '
+<p>
+Fold 3 of <a class="ds-ref">msmarco-document/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold4:
+  desc: '
+<p>
+Fold 4 of <a class="ds-ref">msmarco-document/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold5:
+  desc: '
+<p>
+Fold 5 of <a class="ds-ref">msmarco-document/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+anchor-text:
+  pretty_name: "Anchor Text for Version 1 of MS MARCO"
+  desc: '
+<p>
+For version 1 of MS MARCO, the anchor text collection enriches 1,703,834 documents with anchor text extracted from six Common Crawl snapshots. To keep the collection size reasonable, we sampled 1,000 anchor texts for documents with more than 1,000 anchor texts (this sampling yields that all anchor text is included for 94% of the documents). The <code>text</code> field contains the anchor texts concatenated and the <code>anchors</code> field contains the anchor texts as list. The raw dataset with additional information (roughly 100GB) is <a href="https://github.com/webis-de/ecir22-anchor-text">available online</a>.
+</p>
+'
+  bibtex_ids: ['Froebe2022Anchors']
+

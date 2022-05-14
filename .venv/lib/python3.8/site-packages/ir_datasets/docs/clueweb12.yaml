@@ -1,0 +1,208 @@
+_:
+  pretty_name: 'ClueWeb12'
+  desc: '
+<p>
+ClueWeb 2012 web document collection. Contains 733M web pages.
+</p>
+<p>
+The dataset is obtained for a fee from CMU, and is shipped as hard drives. More information
+is provided <a href="https://lemurproject.org/clueweb12/">here</a>.
+</p>
+<ul>
+<li><a href="https://lemurproject.org/clueweb12/">Document collection site</a></li>
+<li><a href="http://boston.lti.cs.cmu.edu/clueweb12/">Dataset construction details</a></li>
+</ul>
+'
+  docs_instructions: &inst "docs available from CMU"
+  data_access: '
+<p>
+To use this dataset, you need a copy of <a href="https://lemurproject.org/clueweb12/">ClueWeb 2012</a>,
+provided by CMU.
+</p>
+<p>
+Your organization may already have a copy. If this is the case, you may only need to complete a new
+"Individual Argeement". Otherwise, your organization will need to file the "Organizational agreement"
+and pay a fee to CMU to get a copy. The data are provided as hard drives that are shipped to you.
+</p>
+<p>
+Once you have the data, ir_datasets will need the directories that look like the following:
+</p>
+<ul>
+<li><kbd>ClueWeb12_00</kbd></li>
+<li><kbd>ClueWeb12_01</kbd></li>
+<li><kbd>...</kbd></li>
+</ul>
+<p>
+ir_datasets expects the above directories to be copied/linked under <kbd>~/.ir_datasets/clueweb12/corpus</kbd>.
+</p>
+'
+
+b13:
+  desc: '
+<p>
+Official subset of the ClueWeb12 datasets with 52M web pages.
+</p>
+'
+  docs_instructions: *inst
+
+trec-web-2013:
+  desc: '
+<p>
+The TREC Web Track 2013 ad-hoc ranking benchmark. Contains 50 queries with deep relevance judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/web2013.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec22/papers/WEB.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['CollinsThompson2013TrecWeb']
+
+trec-web-2014:
+  desc: '
+<p>
+The TREC Web Track 2014 ad-hoc ranking benchmark. Contains 50 queries with deep relevance judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/web2014.html">Shared task site</a></li>
+<li><a href="http://www-personal.umich.edu/~kevynct/pubs/trec-web-2014-overview.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['CollinsThompson2014TrecWeb']
+
+ntcir-www-1:
+  desc: '
+<p>
+The NTCIR-13 We Want Web (WWW) 1 ad-hoc ranking benchmark. Contains 100 queries with deep relevance judgments
+(avg 255 per query). Judgments aggregated from two assessors. Note that the qrels contain additional judgments
+from the NTCIR-14 CENTRE track.
+</p>
+<ul>
+<li><a href="http://www.thuir.cn/ntcirwww/">Shared task site</a></li>
+<li><a href="http://www.thuir.cn/ntcirwww/files/ntcir13wwwov.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Luo2017Www1']
+
+ntcir-www-2:
+  desc: '
+<p>
+The NTCIR-14 We Want Web (WWW) 2 ad-hoc ranking benchmark. Contains 80 queries with deep relevance judgments
+(avg 345 per query). Judgments aggregated from two assessors.
+</p>
+<ul>
+<li><a href="http://www.thuir.cn/ntcirwww2/">Shared task site</a></li>
+<li><a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings14/pdf/ntcir/01-NTCIR14-OV-WWW-MaoJ.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Mao2018OWww2']
+
+ntcir-www-3:
+  desc: '
+<p>
+The NTCIR-15 We Want Web (WWW) 3 ad-hoc ranking benchmark. Contains 160 queries with deep relevance judgments
+(to be released). 80 of the queries are from <a class="ds-ref">clueweb12/b13/ntcir-www-2</a>.
+</p>
+<ul>
+<li><a href="http://sakailab.com/www3/">Shared task site</a></li>
+</ul>
+'
+  docs_instructions: *inst
+
+trec-misinfo-2019:
+  desc: '
+<p>
+The TREC Medical Misinformation 2019 dataset.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/misinfo2019.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec28/papers/OVERVIEW.D.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Abualsaud2019TrecDecision']
+
+clef-ehealth:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset. Contains consumer health queries and judgments
+containing trustworthiness and understandability scores, in addition to the normal
+relevance assessments.
+</p>
+<p>
+This dataset contains the combined 2016 and 2017 relevance judgments, since the same
+queries were used in the two year. The assessment year can be distinguished using
+iteration (2016 is iteration 0, 2017 is iteration 1).
+</p>
+<ul>
+<li><a href="https://sites.google.com/site/clefehealth2016/task-3">2016 shared task site</a></li>
+<li><a href="https://sites.google.com/site/clefehealth2017/task-3">2017 shared task site</a></li>
+<li><a href="http://ceur-ws.org/Vol-1609/16090015.pdf">2016 shared task paper</a></li>
+<li><a href="http://ceur-ws.org/Vol-1866/invited_paper_16.pdf">2017 shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']
+
+clef-ehealth/cs:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset, with queries professionally translataed to Czech. See
+<a class="ds-ref">clueweb12/b13/clef-ehealth</a> for more details.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']
+
+clef-ehealth/de:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset, with queries professionally translataed to German. See
+<a class="ds-ref">clueweb12/b13/clef-ehealth</a> for more details.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']
+
+clef-ehealth/fr:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset, with queries professionally translataed to French. See
+<a class="ds-ref">clueweb12/b13/clef-ehealth</a> for more details.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']
+
+clef-ehealth/hu:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset, with queries professionally translataed to Hungarian. See
+<a class="ds-ref">clueweb12/b13/clef-ehealth</a> for more details.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']
+
+clef-ehealth/pl:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset, with queries professionally translataed to Polish. See
+<a class="ds-ref">clueweb12/b13/clef-ehealth</a> for more details.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']
+
+clef-ehealth/sv:
+  desc: '
+<p>
+The CLEF eHealth 2016-17 IR dataset, with queries professionally translataed to Swedish. See
+<a class="ds-ref">clueweb12/b13/clef-ehealth</a> for more details.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Zuccon2016ClefEhealth', 'Palotti2017ClefEhealth']

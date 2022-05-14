@@ -1,0 +1,3 @@
+[console_scripts]
+pyterrier = pyterrier.pyterrier_cli:main
+

@@ -1,0 +1,285 @@
+_:
+  pretty_name: 'MSMARCO (passage)'
+  desc: '
+<p>
+A passage ranking benchmark with a collection of 8.8 million passages and question queries. Most
+relevance judgments are shallow (typically at most 1-2 per query), but the TREC Deep Learning track
+adds deep judgments. Evaluation typically conducted using MRR@10.
+</p>
+<p>
+Note that the original document source files for this collection contain a double-encoding error that
+cause strange sequences like "å¬" and "ðºð". These are automatically corrrected (properly converting
+previous examples to "公" and "🇺🇸").
+</p>
+<ul>
+  <li>See also: <a class="ds-ref">msmarco-document</a></li>
+  <li>Documents: Short passages (from web)</li>
+  <li>Queries: Natural language questions (from query log)</li>
+  <li><a href="https://microsoft.github.io/msmarco/#ranking">Leaderboard</a></li>
+  <li><a href="https://arxiv.org/abs/1611.09268">Dataset Paper</a></li>
+</ul>'
+  bibtex_ids: ['Bajaj2016Msmarco']
+
+
+dev:
+  desc: '
+<p>
+Official dev set.
+</p>
+<p>
+scoreddocs are the top 1000 results from BM25. These are used for the "re-ranking" setting. Note
+that these are sub-sampled to about 1/8 of the total avaialable dev queries by the MSMARCO authors
+for faster evaluation. The BM25 scores from scoreddocs are not available (all have a score of 0).
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+dev/small:
+  desc: '
+<p>
+Official "small" version of the dev set, consisting of 6,980 queries (6.9% of the full dev set).
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+dev/judged:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/dev</a> that only includes queries that have at least
+one qrel.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+eval:
+  desc: '
+<p>
+Official eval set for submission to MS MARCO leaderboard. Relevance judgments are hidden.
+</p>
+<p>
+scoreddocs are the top 1000 results from BM25. These are used for the "re-ranking" setting. Note
+that these are sub-sampled to about 1/8 of the total avaialable eval queries by the MSMARCO authors
+for faster evaluation. The BM25 scores from scoreddocs are not available (all have a score of 0).
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+eval/small:
+  desc: '
+<p>
+Official "small" version of the eval set, consisting of 6,837 queries (6.8% of the full eval set).
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+train:
+  desc: '
+<p>
+Official train set.
+</p>
+<p>
+Not all queries have relevance judgments. Use <a class="ds-ref">msmarco-passage/train/judged</a> for
+a filtered list that only includes documents that have at least one qrel.
+</p>
+<p>
+scoreddocs are the top 1000 results from BM25. These are used for the "re-ranking" setting. Note
+that these are sub-sampled to about 1/8 of the total avaialable train queries by the MSMARCO authors
+for faster evaluation. The BM25 scores from scoreddocs are not available (all have a score of 0).
+</p>
+<p>
+docpairs provides access to the "official" sequence for pairwise training.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+train/triples-v2:
+  desc: '
+<p>
+Version of <a class="ds-ref">msmarco-passage/train</a>, but with version 2 of the triples file.
+</p>
+<p>
+This version of the triples file includes rows that were accidently missing from version 1 of the
+file (see discussion <a href="https://github.com/microsoft/MSMARCO-Passage-Ranking/commit/4695a71c6c76ce85c07a51c0f12690cab19abbb0">here</a>).
+</p>
+<p>
+Note that this is sorted by the IDs in the file, so you probably would not want to use it unless
+you first shuffle it before usage. <a href="https://github.com/microsoft/MSMARCO-Passage-Ranking/issues/21">We opened an issue</a>
+suggesting that a third version of the file is provided that is shuffled so that the order is consistent across groups
+using the data, but at this time, no such file exists in an official capacity.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+train/triples-small:
+  desc: '
+<p>
+Version of <a class="ds-ref">msmarco-passage/train</a>, but with the "small" triples file (a 10% sample of the full file).
+</p>
+<p>
+Note that to save on storage space (27GB), the contents of the file are mapped to their corresponding query and document IDs.
+This process takes a few minutes to run the first time the triples are requested.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+train/judged:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/train</a> that only includes queries that have at least
+one qrel.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+train/medical:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/train</a> that only includes queries that have a layman
+or expert medical term. Note that this includes about 20% false matches due to terms with multiple
+senses.
+</p>'
+  bibtex_ids: ['MacAvaney2020MedMarco', 'Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+train/split200-train:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/train</a> without 200 queries that are meant to be used
+as a small validation set. From various works.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+train/split200-valid:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/train</a> with only 200 queries that are meant to be used
+as a small validation set. From various works.
+</p>
+'
+  bibtex_ids: ['Bajaj2016Msmarco']
+  official_measures: ['RR@10']
+
+
+trec-dl-2019:
+  desc: '
+<p>
+Queries from the TREC Deep Learning (DL) 2019 shared task, which were sampled from
+<a class="ds-ref">msmarco-passage/eval</a>. A subset of these queries were judged by NIST assessors,
+(filtered list available in <a class="ds-ref">msmarco-passage/trec-dl-2019/judged</a>).
+</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2003.07820.pdf">Shared Task Paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Craswell2019TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)', 'AP(rel=2)']
+
+
+trec-dl-2019/judged:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/trec-dl-2019</a>, only including queries with qrels.
+</p>
+'
+  bibtex_ids: ['Craswell2019TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)', 'AP(rel=2)']
+
+
+trec-dl-2020:
+  desc: '
+<p>
+Queries from the TREC Deep Learning (DL) 2020 shared task, which were sampled from
+<a class="ds-ref">msmarco-passage/eval</a>. A subset of these queries were judged by NIST assessors,
+(filtered list available in <a class="ds-ref">msmarco-passage/trec-dl-2020/judged</a>).
+</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2102.07662.pdf">Shared Task Paper</a></li>
+</ul>
+'
+  bibtex_ids: ['Craswell2020TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)', 'AP(rel=2)']
+
+trec-dl-2020/judged:
+  desc: '
+<p>
+Subset of <a class="ds-ref">msmarco-passage/trec-dl-2020</a>, only including queries with qrels.
+</p>
+'
+  bibtex_ids: ['Craswell2020TrecDl', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)', 'AP(rel=2)']
+
+trec-dl-hard:
+  desc: '
+<p>
+A more challenging subset of <a class="ds-ref">msmarco-passage/trec-dl-2019</a> and <a class="ds-ref">msmarco-document/trec-dl-2020</a>.
+</p>
+<ul>
+<li><a href="https://github.com/grill-lab/DL-Hard">data website</a></li>
+<li>See Also: <a class="ds-ref">msmarco-document/trec-dl-hard</a></li>
+</ul>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold1:
+  desc: '
+<p>
+Fold 1 of <a class="ds-ref">msmarco-passage/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold2:
+  desc: '
+<p>
+Fold 2 of <a class="ds-ref">msmarco-passage/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold3:
+  desc: '
+<p>
+Fold 3 of <a class="ds-ref">msmarco-passage/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold4:
+  desc: '
+<p>
+Fold 4 of <a class="ds-ref">msmarco-passage/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']
+
+trec-dl-hard/fold5:
+  desc: '
+<p>
+Fold 5 of <a class="ds-ref">msmarco-passage/trec-dl-hard</a>
+</p>
+'
+  bibtex_ids: ['Mackie2021DlHard', 'Bajaj2016Msmarco']
+  official_measures: ['nDCG@10', 'RR(rel=2)']

@@ -1,0 +1,200 @@
+_:
+  pretty_name: 'GOV2'
+  desc: '
+<p>
+GOV2 web document collection. Used for the TREC Terabyte Track.
+</p>
+<p>
+The dataset is obtained for a fee from UoG, and is shipped as a hard drive. More information
+is provided <a href="http://ir.dcs.gla.ac.uk/test_collections/access_to_data.html">here</a>.
+</p>
+<ul>
+<li><a href="http://ir.dcs.gla.ac.uk/test_collections/gov2-summary.htm">Document collection site</a></li>
+</ul>
+'
+  docs_instructions: &inst "docs available from UoG"
+  data_access: '
+<p>
+To use this dataset, you need a copy of <a href="http://ir.dcs.gla.ac.uk/test_collections/access_to_data.html">GOV2</a>,
+provided by the University of Glasgow.
+</p>
+<p>
+Your organization may already have a copy. If this is the case, you may only need to complete a new
+"Individual Argeement". Otherwise, your organization will need to file the "Organizational agreement"
+and pay a fee to UoG to get a copy. The data are provided as hard drives that are shipped to you.
+</p>
+<p>
+Once you have the data, ir_datasets will need the <kbd>GOV2_data</kbd> directory.
+</p>
+<p>
+ir_datasets expects the above directory to be copied/linked under <kbd>~/.ir_datasets/gov/corpus</kbd>.
+</p>
+'
+
+trec-tb-2004:
+  desc: '
+<p>
+The TREC Terabyte Track 2004 ad-hoc ranking benchmark. Contains 50 queries with deep relevance judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte04.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec13/papers/TERA.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Clarke2004TrecTerabyte']
+
+trec-tb-2005:
+  desc: '
+<p>
+The TREC Terabyte Track 2005 ad-hoc ranking benchmark. Contains 50 queries with deep relevance judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte05.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec14/papers/TERABYTE.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Clarke2005TrecTerabyte']
+
+trec-tb-2005/named-page:
+  desc: '
+<p>
+The TREC Terabyte Track 2005 named page ranking benchmark. Contains 252 queries with titles that
+resemble bookmark labels. Relevance judgments include near-duplicate pages and other pages that
+may satisfy the bookmark label.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte05.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec14/papers/TERABYTE.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Clarke2005TrecTerabyte']
+
+trec-tb-2005/efficiency:
+  desc: '
+<p>
+The TREC Terabyte Track 2005 efficiency ranking benchmark. Contains 50,000 queries from a search engine,
+including the 50 topics from <a class="ds-ref">gov2/trec-tb-2005</a>. Only the 50 topics have judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte05.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec14/papers/TERABYTE.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Clarke2005TrecTerabyte']
+
+trec-tb-2006:
+  desc: '
+<p>
+The TREC Terabyte Track 2006 ad-hoc ranking benchmark. Contains 50 queries with deep relevance judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte06.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec15/papers/TERA06.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/named-page:
+  desc: '
+<p>
+The TREC Terabyte Track 2006 named page ranking benchmark. Contains 181 queries with titles that
+resemble bookmark labels. Relevance judgments include near-duplicate pages and other pages that
+may satisfy the bookmark label.</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte06.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec15/papers/TERA06.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/efficiency:
+  desc: '
+<p>
+The TREC Terabyte Track 2006 efficiency ranking benchmark. Contains 100,000 queries from a search engine,
+including the 50 topics from <a class="ds-ref">gov2/trec-tb-2006</a>. Only the 50 topics have judgments.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/terabyte05.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec14/papers/TERABYTE.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/efficiency/10k:
+  desc: '
+<p>
+Small stream from <a class="ds-ref">gov2/trec-tb-2006/efficiency</a>, with 10,000 queries.
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/efficiency/stream1:
+  desc: '
+<p>
+Stream 1 of <a class="ds-ref">gov2/trec-tb-2006/efficiency</a> (25,000 queries).
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/efficiency/stream2:
+  desc: '
+<p>
+Stream 2 of <a class="ds-ref">gov2/trec-tb-2006/efficiency</a> (25,000 queries).
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/efficiency/stream3:
+  desc: '
+<p>
+Stream 3 of <a class="ds-ref">gov2/trec-tb-2006/efficiency</a> (25,000 queries).
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-tb-2006/efficiency/stream4:
+  desc: '
+<p>
+Stream 4 of <a class="ds-ref">gov2/trec-tb-2006/efficiency</a> (25,000 queries).
+</p>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Buttcher2006TrecTerabyte']
+
+trec-mq-2007:
+  desc: '
+<p>
+TREC 2007 Million Query track.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/million.query07.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec16/papers/1MQ.OVERVIEW16.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Allen2007MQ']
+
+trec-mq-2008:
+  desc: '
+<p>
+TREC 2008 Million Query track.
+</p>
+<ul>
+<li><a href="https://trec.nist.gov/data/million.query08.html">Shared task site</a></li>
+<li><a href="https://trec.nist.gov/pubs/trec17/papers/MQ.OVERVIEW.pdf">Shared task paper</a></li>
+</ul>
+'
+  docs_instructions: *inst
+  bibtex_ids: ['Allen2008MQ']
+
