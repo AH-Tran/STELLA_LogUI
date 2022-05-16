@@ -21,3 +21,12 @@
 - | | | external link: author name?
 - | | | add tags?
 - | | display recommendation on sidepane
+
+
+## Logui Steps
+- Install Server
+- Install Client
+- insert javascript into layout.html?
+- configure logui
+- simulate and retrieve log data
+- visualize?
