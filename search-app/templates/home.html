@@ -1,0 +1,9 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    {% for document in documents %}
+        <h1> {{ document.title}}</h1>
+        <p> By {{ document.author}} on {{document.date}}</p>
+        <p> {{document.abstract}}</p>
+    {% endfor %}
+{% endblock  content%}

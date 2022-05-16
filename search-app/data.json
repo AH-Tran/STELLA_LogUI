@@ -1,0 +1,22 @@
+{
+    "body":{
+        "1":{"docid":"pl48ev5o","type":"EXP"},
+        "10":{"docid":"ne5r4d4b","type":"BASE"},
+        "11":{"docid":"hl967ekh","type":"EXP"},
+        "12":{"docid":"8ccl9aui","type":"BASE"},
+        "13":{"docid":"zy8qjaai","type":"EXP"},"14":{"docid":"12dcftwt","type":"BASE"},
+        "15":{"docid":"4dtk1kyh","type":"BASE"},"16":{"docid":"ehjui7u6","type":"EXP"},
+        "17":{"docid":"ec8lpgl3","type":"BASE"},"18":{"docid":"c6nrl4ea","type":"EXP"},
+        "19":{"docid":"vq4t53l9","type":"EXP"},"2":{"docid":"75773gwg","type":"BASE"},
+        "20":{"docid":"kgifmjvb","type":"BASE"},"3":{"docid":"xwi9pdd2","type":"EXP"},
+        "4":{"docid":"kn2z7lho","type":"BASE"},"5":{"docid":"irkjiqll","type":"EXP"},
+        "6":{"docid":"4fb291hq","type":"BASE"},"7":{"docid":"kqqantwg","type":"BASE"},
+        "8":{"docid":"jpnbppry","type":"EXP"},"9":{"docid":"es7q6c90","type":"EXP"}
+    },
+    "header":{
+        "container":
+            {"base":"pyterrier_bm25","exp":"pyterrier_pl2"},
+        "hits":20,"page":0,"q":"coronavirus origin",
+        "rid":6,"rpp":20,"sid":"2d94194faaad4da4b7147f6a4b3f8bee"
+    }
+}

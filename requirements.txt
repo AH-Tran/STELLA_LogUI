@@ -1,2 +1,4 @@
 ir_datasets
 python-terrier
+flask
+python-dotenv

@@ -16,5 +16,8 @@
 - When user inputs query in textfield
 - | send query to pyterrier search engine
 - | receive results as JSON file
+- | | sort results by number/place
 - | | display JSON file as results page
+- | | | external link: author name?
+- | | | add tags?
 - | | display recommendation on sidepane
