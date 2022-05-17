@@ -1,8 +1,10 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
+import requests
 from forms import SearchForm
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'cof13dc122a324a46288d7055f02481d6be'
+db_url = "localhost:8080"
 
 @app.context_processor
 def base():
@@ -36,7 +38,18 @@ def about():
 
 @app.route("/result", methods=['GET', 'POST'])
 def result():
-    return render_template("result.html", title="Search Results", documents = documents)
+    errors = []
+    results = {}
+    if request.method == "POST":
+        url = "/stella/api/v1/ranking?query="
+        url_affix = "&rpp=20"
+        query = request.form['query']
+        #query = query.replace(" ", "%")
+        end_query = db_url + url + query + url_affix
+        return end_query
+        #return render_template("document.html", title="Document Results", documents = documents)
+    else:
+        return render_template("result.html", title="Search Results", documents = documents)
 
 @app.route("/document")
 def document():

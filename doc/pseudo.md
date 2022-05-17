@@ -24,7 +24,7 @@
 
 
 ## Logui Steps
-- Install Server
+- (Install Server)
 - Install Client
 - insert javascript into layout.html?
 - configure logui
