@@ -44,3 +44,30 @@ def index():
                 "Unable to get URL. Please make sure it's valid and try again."
             )
     return render_template('index.html', errors=errors, results=results)
+______
+
+
+
+
+
+
+
+{% extends "layout.html" %}
+{% block content %}
+    {% for document in search_results %}
+        <article class="media content-section">
+            <div class="media-body">
+              <h2><a class="article-title" href="#">{{ document.title }}</a></h2>
+              <p class="article-content"> An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any in-depth analysis of a particular subject and is often used to help the reader quickly ascertain the paper's purpose.[1]</p>
+
+              <!--- -->
+
+
+              <div class="article-metadata" style="display: flex; justify-content: flex-end">
+                <a class="mr-2" href="#">By John Talulah</a>
+                <small class="text-muted"> 5. March 2020</small>
+              </div>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock  content%}
