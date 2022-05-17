@@ -2,11 +2,12 @@ from urllib import response
 from flask import Flask, render_template, url_for, request
 import requests, json
 from forms import SearchForm
+import collections
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'cof13dc122a324a46288d7055f02481d6be'
 db_url = "http://localhost:8080"
-rpp = 20 # Default Results per Page
+rpp = 10 # Default Results per Page
 
 @app.context_processor
 def base():
@@ -56,6 +57,7 @@ def result():
         #response = response.text
         #search_results = json.loads(response)
         search_results = response.json()
+        #print(search_results)
         if len(search_results["body"]) == 0:
              return render_template("no_result.html", title="No Results found", query= query)
     #print(search_results["body"]["1"]["docid"])
