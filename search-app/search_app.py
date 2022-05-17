@@ -53,9 +53,15 @@ def result():
             response = requests.get(end_query)
         except requests.ConnectionError:
             return "Connection Error" 
+        #response = response.text
+        #search_results = json.loads(response)
         search_results = response.json()
-        return search_results
-        #return render_template("search.html", title="Search Results", search_results = search_results)
+        if len(search_results["body"]) == 0:
+             return render_template("no_result.html", title="No Results found", query= query)
+    #print(search_results["body"]["1"]["docid"])
+        #search_results_dict = json.loads(search_results)
+        #return search_results
+        return render_template("search.html", title="Search Results", search_results = search_results)
     else:
         return render_template("result.html", title="No Results", documents = documents)
 

@@ -1,4 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
-    <p> A <b>Flask Search Application</b> for the <b>Cord19 data set</b>> in conjunction with the <b>STELLA APP</b> </p>
+    {% for key, parent_dict_item in search_results.items() %}
+        {% for key2, nested_value  in parent_dict_item.items() %}
+        <article class="media content-section">
+            <div class="media-body">
+              <h2><a class="article-title" href="#">DOCID: {{ nested_value.docid }}</a></h2>
+              <p class="article-content">An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any in-depth analysis of a particular subject and is often used to help the reader quickly ascertain the paper's purpose.</p>
+
+              <!--- -->
+
+
+              <div class="article-metadata" style="display: flex; justify-content: flex-end">
+                <a class="mr-2" href="#">By Jeremy Falulah</a>
+                <small class="text-muted">07.03.2019</small>
+              </div>
+            </div>
+        </article>
+        {% endfor %}
+    {% endfor %}
 {% endblock  content%}
