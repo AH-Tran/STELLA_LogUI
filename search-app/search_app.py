@@ -44,7 +44,6 @@ def result():
         url = "/stella/api/v1/ranking?query="
         url_affix = "&rpp=20"
         query = request.form['query']
-        #query = query.replace(" ", "%")
         end_query = db_url + url + query + url_affix
         return end_query
         #return render_template("document.html", title="Document Results", documents = documents)
