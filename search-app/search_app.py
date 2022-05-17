@@ -1,15 +1,18 @@
+from urllib import response
 from flask import Flask, render_template, url_for, request
-import requests
+import requests, json
 from forms import SearchForm
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'cof13dc122a324a46288d7055f02481d6be'
-db_url = "localhost:8080"
+db_url = "http://localhost:8080"
+rpp = 20 # Default Results per Page
 
 @app.context_processor
 def base():
     form = SearchForm()
     return dict(form=form)
+
 
 documents = [
     {
@@ -42,13 +45,20 @@ def result():
     results = {}
     if request.method == "POST":
         url = "/stella/api/v1/ranking?query="
-        url_affix = "&rpp=20"
+        url_affix = "&rpp="
         query = request.form['query']
-        end_query = db_url + url + query + url_affix
-        return end_query
-        #return render_template("document.html", title="Document Results", documents = documents)
+        rpp = request.form['rpp']
+        end_query = db_url + url + query + url_affix + rpp
+        try:
+            response = requests.get(end_query)
+        except requests.ConnectionError:
+            return "Connection Error" 
+        search_results = response.json()
+        return search_results
+        #return render_template("search.html", title="Search Results", search_results = search_results)
     else:
-        return render_template("result.html", title="Search Results", documents = documents)
+        return render_template("result.html", title="No Results", documents = documents)
+
 
 @app.route("/document")
 def document():
