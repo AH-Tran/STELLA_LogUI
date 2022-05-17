@@ -1,5 +1,13 @@
 from flask import Flask, render_template, url_for
+from forms import SearchForm
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'cof13dc122a324a46288d7055f02481d6be'
+
+@app.context_processor
+def base():
+    form = SearchForm()
+    return dict(form=form)
 
 documents = [
     {
@@ -19,13 +27,14 @@ documents = [
 
 @app.route("/")
 def home():
-    return render_template("home.html", documents = documents)
+    form = SearchForm()
+    return render_template("home.html", form=form)
 
 @app.route("/about")
 def about():
     return render_template("about.html", title="About")
 
-@app.route("/result")
+@app.route("/result", methods=['GET', 'POST'])
 def result():
     return render_template("result.html", title="Search Results", documents = documents)
 

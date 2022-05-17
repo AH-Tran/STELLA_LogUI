@@ -32,12 +32,16 @@
                 <a class="nav-item nav-link" href="/">Home</a>
                 <a class="nav-item nav-link" href="/about">About</a>
                 </div>
-                <!-- Navbar Right Side
+
+                <!-- Search Navbar Right Side-->
                 <div class="navbar-nav">
-                <a class="nav-item nav-link" href="/login">Login</a>
-                <a class="nav-item nav-link" href="/register">Register</a>
+                    {{ form.hidden_tag()}}
+                    <form method="POST" action="{{ url_for('result')}}" class ="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search", name="query">
+                        <button class="btn btn-outline-secondary" type="submit" style="color:white">Submit</button>
+                    </form>
                 </div>
-                -->
+                
             </div>
             </div>
         </nav>
@@ -52,7 +56,7 @@
             <div class="col-md-4">
             <div class="content-section">
                 <h3>Instructions</h3>
-                <p class='text-muted'>Welcome to the Cord19 Search App
+                <p class='text-muted'>Welcome to the Cord19 Search App. Use the Searchbar to 
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-light">Latest Posts</li>
                     <li class="list-group-item list-group-item-light">Announcements</li>
