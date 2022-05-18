@@ -25,6 +25,7 @@
 
 ## Logui Steps
 - (Install Server)
+- change proxy port in .env file to 8052
 - Install Client
 - insert javascript into layout.html?
 - configure logui

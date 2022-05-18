@@ -71,3 +71,8 @@ ______
         </article>
     {% endfor %}
 {% endblock  content%}
+
+___
+
+if no docker ps shows up:
+$ sudo systemctl restart docker
