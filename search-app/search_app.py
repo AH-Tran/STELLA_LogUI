@@ -65,7 +65,7 @@ def result():
         #return search_results
         return render_template("search.html", title="Search Results", search_results = search_results)
     else:
-        return render_template("result.html", title="No Results", documents = documents)
+        return render_template("no_result.html", title="No Results found")
 
 
 @app.route("/document")
