@@ -76,3 +76,30 @@ ___
 
 if no docker ps shows up:
 $ sudo systemctl restart docker
+
+commands for logui:
+- cd logui-server
+- ctrl+c quit terminal
+- docker-compose -p logui down
+- docker-compose -p logui up
+
+commands for stella:
+- cd to root(STELLA_LogUI)
+- docker-compose -f stella-app/yml/pyterrier.yml down -d
+docker-compose -f stella-app/yml/pyterrier.yml up -d
+
+change websocket
+8000 currently occupied by STELLA
+
+ERROR
+websocket-worker_1  | 2022-05-18 08:04:08,307 INFO     Starting server at tcp:port=8000:interface=0.0.0.0
+websocket-worker_1  | 2022-05-18 08:04:08,308 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+websocket-worker_1  | 2022-05-18 08:04:08,308 INFO     Configuring endpoint tcp:port=8000:interface=0.0.0.0
+websocket-worker_1  | 2022-05-18 08:04:08,309 INFO     Listening on TCP address 0.0.0.0:8000
+websocket-worker_1  | 2022-05-18 09:06:07,041 WARNING  Not Found: /ws/endpoint/
+websocket-worker_1  | 172.19.0.4:59346 - - [18/May/2022:09:06:07] "GET /ws/endpoint/" 404 1049
+___
+
+using google dev tool
+websocket is active, listening and connecting
+mistake in client?

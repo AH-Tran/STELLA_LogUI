@@ -31,3 +31,5 @@
 - configure logui
 - simulate and retrieve log data
 - visualize?
+
+- no distinction between localhosts for log ui flights
