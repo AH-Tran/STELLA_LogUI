@@ -3,3 +3,12 @@ sudo apt-get install ./docker-desktop-4.8.1-amd64.deb
 
 cd to workspace
 $ sudo docker-compose -f stella-app/yml/pyterrier.yml up -d
+
+cd to logui-server
+docker compose
+
+cd to stella-app
+docker compose
+
+cd to search-app
+python search-app.py

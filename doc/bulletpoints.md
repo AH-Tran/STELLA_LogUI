@@ -5,6 +5,10 @@
 
 **Logging Frameworks over time**
 
+**Living Labs**
+
+**Interactive Information Retrieval**
+
 **Tools**
 
 

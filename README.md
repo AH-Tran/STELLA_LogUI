@@ -8,3 +8,4 @@ Components:
 * Stella-App
 * Flask
 * LogUi
+* Big Brother
