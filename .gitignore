@@ -130,8 +130,8 @@ venv.bak/
 
 # Indices
 indices/
-stella-app/
-stella-app
+#stella-app/
+#stella-app
 
 # LogUI
 logui/
