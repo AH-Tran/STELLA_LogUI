@@ -35,6 +35,36 @@ Placeholder
 ```
 pip3 install -r requirements.txt
 ```
+**LoguI Server Setup**
+Create Environment File
+```
+cd logui-server/scripts/
+./create_env.sh
+cd ..
+```
+
+Build LogUI server container images
+```
+cd logui-server
+docker-compose -p logui build
+docker-compose -p logui pull
+```
+
+Start LogUI Server
+```
+docker-compose -p logui up
+```
+
+Create user account
+```
+cd scripts
+./create_user.sh your_user_name
+´´´
+
+Stop LogUI Server
+```
+docker-compose -p logui down
+´´´
 
 ## Important Scripts
 Placeholder

@@ -75,31 +75,6 @@ def result():
         return render_template("search.html", title="Search Results", search_results = search_results, query=query)
     else:
         return render_template("no_result.html", title="No Results found")
-"""
-        url = "/stella/api/v1/ranking?query="
-        url_affix = "&rpp="
-        query = request.form['query']
-        rpp = request.form['rpp']
-        radio_option = request.form['year-radio']
-        if radio_option == "":
-            end_query = db_url + url + query + url_affix + rpp
-        else:
-            end_query = db_url + url + query + " " + radio_option + url_affix + rpp  
-        try:
-            response = requests.get(end_query)
-        except requests.ConnectionError:
-            return "Connection Error" 
-        print(end_query)
-        #response = response.text
-        #search_results = json.loads(response)
-        search_results = response.json()
-        #print(search_results)
-        if len(search_results["body"]) == 0:
-             return render_template("no_result.html", title="No Results found", query= query)
-    #print(search_results["body"]["1"]["docid"])
-        #search_results_dict = json.loads(search_results)
-        #return search_results
-        return render_template("search.html", title="Search Results", search_results = search_results)"""
 
 @app.route("/document")
 def document():
