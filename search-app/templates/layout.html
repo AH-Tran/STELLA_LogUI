@@ -23,21 +23,21 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-            <a class="navbar-brand mr-4" href="/">Cord19 Search App</a>
+            <a class="navbar-brand mr-4" href="/" id="app-home">Cord19 Search App</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href="/about">About</a>
+                <a class="nav-item nav-link" href="/about" id="app-about">About</a>
                 </div>
 
                 <!-- Search Navbar Right Side-->
-                <div class="nav_searchbar">
+                <div class="nav-searchbar">
                     {{ form.hidden_tag()}}
-                    <form method="POST" action="{{ url_for('result')}}" class ="d-flex">
+                    <form method="POST" action="{{ url_for('result')}}" class ="d-flex" id="search-bar">
                         <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search", name="query" id="search-box">
-                        <input class="form-control me-2" type="number" min="1" style="width: 11em;" placeholder="Results per Page" aria-label="Search", name="rpp">
+                        <input class="form-control me-2" type="number" min="1" style="width: 11em;" placeholder="Results per Page" aria-label="Search", name="rpp", id="rpp-box">
                         <button class="btn btn-outline-secondary" type="submit" style="color:white" id="submit-box">Submit</button>
                     </form>
                 </div>
@@ -53,18 +53,40 @@
             <div class="col-md-8">
             {% block content %}{% endblock content%}
             </div>
+
+            <!-- Sidebar-->
             <div class="col-md-4">
             <div class="content-section">
-                <h3>Instructions</h3>
+                <h3>Cord19 Search App</h3>
                 <p class='text-muted'>Welcome to the Cord19 Search App. <br>Use the Searchbar to search the Cord19 data set for specific documents. 
+                
+                    <!-- Advanced Search-->
+                <div class="nav-searchbar-advanced">
+                    <h5>Advanced Search</h3>
+                    {{ form.hidden_tag()}}
+                    <form method="POST" action="{{ url_for('result')}}" id="search-bar-advanced">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search", name="query" id="search-box-advanced">
+                        <input class="form-control me-2" type="number" min="1" placeholder="Results per Page" aria-label="Search", name="rpp", id="rpp-box-advanced">
+                        <button class="btn btn-outline-secondary" type="submit" style="color:white; background-color:#6da861;" id="submit-box-advanced">Submit</button>
+                    </form>
+                </div>
+                <!-- External Links-->
+                <p>
+                <h5>External Links</h3>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-light">STELLA</li>
-                    <li class="list-group-item list-group-item-light">LogUI</li>  
-                    <li class="list-group-item list-group-item-light">Cord19 Data Set</li>
+                    <li class="list-group-item list-group-item-light" style="text-align: center;"><a href="https://github.com/AH-Tran/STELLA_LogUI" id="github-ext">GitHub</a></li>
+                    <li class="list-group-item list-group-item-light" style="text-align: center;"><a href="https://stella-project.org/" id="stella-ext">STELLA</a></li> 
+                    <li class="list-group-item list-group-item-light" style="text-align: center;"><a href="https://github.com/logui-framework" id="logui-ext">LogUI</a></li> 
+                    <li class="list-group-item list-group-item-light" style="text-align: center;"><a href="https://github.com/hscells/bigbro" id="bigbro-ext">Big Brother</a></li>   
+                    <li class="list-group-item list-group-item-light" style="text-align: center;"><a href="https://github.com/allenai/cord19" id="cord19-ext">Cord19 Data Set</a></li>
                 </ul>
+                </p>
+
                 </p>
             </div>
             </div>
+
+
         </div>
         </main>
     

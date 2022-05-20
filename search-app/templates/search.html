@@ -3,22 +3,25 @@
     {% for key, parent_dict_item in search_results.items() %}
     {% if 'body' in key %}
         {% for key2, nested_value  in parent_dict_item.items() %}
-        <article class="media content-section">
+        <article class="media content-section" id="result-{{ loop.index }}!">
             <div class="media-body">
-              <h2><a class="article-title" href="#{{ nested_value.docid }}">DOCID: {{ nested_value.docid }}</a> </h2><small class="text-muted" style="display:flex; justify-content: flex-end">{{ loop.index }}</small>
+              <h2><a class="article-title" href="#{{ nested_value.docid }}" id="title-{{ loop.index }}!">DOCID: {{ nested_value.docid }}</a></h2><small class="text-muted" style="display:flex; justify-content: flex-end">{{ loop.index }}</small>
               <p class="article-content"><b>ABSTRACT </b>An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any in-depth analysis of a particular subject and is often used to help the reader quickly ascertain the paper's purpose.
-              <a class="media-inspect" href="#">View More...</a> </p>
+              <a class="media-inspect" href="#" id="inspect-{{ loop.index }}!" style="display:inline-block;margin-right:10px;">View More...</a> <a class="media-inspect" href="#" id="bookmark-{{ loop.index }}!" style="display:inline-block;">Bookmark</a> 
+              </p>
               <!--<p><small class="text-muted">{{ nested_value.type }}</small></p> -->
-              <div ><a class="article-tag" href="#" class="fill-div">Covid-19</a></div>
-              <div ><a class="article-tag" href="#" class="fill-div">Disease</a></div>
+              <div ><a class="article-tag" href="#" class="fill-div" id="tag1-{{ loop.index }}!">Covid-19</a></div>
+              <div ><a class="article-tag" href="#" class="fill-div" id="tag2-{{ loop.index }}!">Disease</a></div>
               <!--- -->
               
 
-              <div class="article-metadata" style="display: flex; justify-content: flex-end">
-                <a class="mr-2" href="#">By Jeremy Falulah</a>
-                <small class="text-muted">07.03.2019</small>
+              <div class="article-metadata" style="display: flex; justify-content: flex-end" id="metadata-{{ loop.index }}!">
+                <a class="mr-2" href="#" id="author-{{ loop.index }}!">By Jeremy Falulah</a>
+                <small class="text-muted" id="date-{{ loop.index }}!">07.03.2019 </small>
+                
 
               </div>
+              <small class="text-muted" style="display:flex; justify-content: flex-end" id="type-{{ loop.index }}!"> {{ nested_value.type }}</small>
             </div>
         </article>
         {% endfor %}
