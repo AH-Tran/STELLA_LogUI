@@ -72,7 +72,7 @@ def result():
     #print(search_results["body"]["1"]["docid"])
         #search_results_dict = json.loads(search_results)
         #return search_results
-        return render_template("search.html", title="Search Results", search_results = search_results)
+        return render_template("search.html", title="Search Results", search_results = search_results, query=query)
     else:
         return render_template("no_result.html", title="No Results found")
 """
