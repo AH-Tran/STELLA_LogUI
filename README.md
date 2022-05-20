@@ -70,7 +70,7 @@ docker-compose -p logui down
 Placeholder
 
 ## Troubleshooting
-Placeholder
+Websocket Connectivity Instructions HERE
 
 ## Sources
 Placeholder
