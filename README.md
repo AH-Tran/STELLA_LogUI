@@ -35,7 +35,7 @@ Placeholder
 ```
 pip3 install -r requirements.txt
 ```
-**LoguI Server Setup**
+**LoguI Server Setup**  
 Create Environment File
 ```
 cd logui-server/scripts/
