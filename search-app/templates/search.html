@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-<p><b>  Search Results</b> for: [ {{ query }} ]</p>
+<small class="container-info"><p><b>  Search Results</b> for: [ {{ query }} ]
+</small>
+<small id="base-info"><br><b>Info: </b>BASE => [ {{ search_results.header.container.base}} ];
+  EXP => [ {{ search_results.header.container.exp }} ];
+  sid => [ {{ search_results.header.sid }} ]</small>
+  <hr>
     {% for key, parent_dict_item in search_results.items() %}
     {% if 'body' in key %}
         {% for key2, nested_value  in parent_dict_item.items() %}
