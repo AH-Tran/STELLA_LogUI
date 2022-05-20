@@ -38,7 +38,7 @@
                     <form method="POST" action="{{ url_for('result')}}" class ="d-flex" id="search-bar">
                         <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search", name="query" id="search-box">
                         <input class="form-control me-2" type="number" min="1" style="width: 11em;" placeholder="Results per Page" aria-label="Search", name="rpp", id="rpp-box">
-                        <button class="btn btn-outline-secondary" type="submit" style="color:white" id="submit-box">Submit</button>
+                        <button class="btn btn-outline-secondary" type="submit" style="color:white" name="submit-box" id="submit-box">Submit</button>
                     </form>
                 </div>
                 
@@ -58,8 +58,8 @@
             <div class="col-md-4">
             <div class="content-section">
                 <h3>Cord19 Search App</h3>
-                <p class='text-muted'>Welcome to the Cord19 Search App. <br>Use the Searchbar to search the Cord19 data set for specific documents. 
-                
+                <p class='text-muted'>Welcome to the Cord19 Search App. <br>Use the <b>search bar</b> to search the Cord19 data set for a specific query. 
+                <hr>
                     <!-- Advanced Search-->
                 <div class="nav-searchbar-advanced">
                     <h5>Advanced Search</h3>
@@ -67,9 +67,28 @@
                     <form method="POST" action="{{ url_for('result')}}" id="search-bar-advanced">
                         <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search", name="query" id="search-box-advanced">
                         <input class="form-control me-2" type="number" min="1" placeholder="Results per Page" aria-label="Search", name="rpp", id="rpp-box-advanced">
-                        <button class="btn btn-outline-secondary" type="submit" style="color:white; background-color:#6da861;" id="submit-box-advanced">Submit</button>
+                        <br>
+                        <div class="searchbar-advanced-radio">
+                            Date Selection<br>
+                            <input type="radio" id="radio-none"
+                            name="year-radio" checked="checked" value="">
+                           <label for="radio-2019">None</label>
+                            <input type="radio" id="radio-2019"
+                             name="year-radio" value="2019">
+                            <label for="radio-2019">2019</label>
+                        
+                            <input type="radio" id="radio-2020"
+                             name="year-radio" value="2020">
+                            <label for="radio-2020">2020</label>
+                        
+                            <input type="radio" id="radio-2021"
+                             name="year-radio" value="2021">
+                            <label for="radio-2021">2021</label>
+                        </div>
+                        <button class="btn btn-outline-secondary" type="submit" style="color:white; background-color:#6da861;" name="submit-box-advanced" id="submit-box-advanced">Submit</button>
                     </form>
                 </div>
+                <hr>
                 <!-- External Links-->
                 <p>
                 <h5>External Links</h3>
