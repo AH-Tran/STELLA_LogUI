@@ -9,6 +9,7 @@ A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
 
 ## Cord19 Search App
 ![image info](./img/search_app.png)
+
 ## Table of contents
 - [Prerequisites](#rerequisites)
 - [How to use](#how-to-use)
@@ -18,6 +19,9 @@ A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
 - [Sources](#sources)
 - [Acknowledgements](#acknowledgements)
 - [Further Research](#further-research)
+- [Images](#images)
+
+
 
 ## Prerequisites:  
 * Python >= 3.6
@@ -82,3 +86,8 @@ Placeholder
 
 ## Further Research
 Placeholder
+
+## Images
+![image info](./img/logui_app.png)
+![image info](./img/logui_flights.png)
+![image info](./img/logui_sessions.png)
