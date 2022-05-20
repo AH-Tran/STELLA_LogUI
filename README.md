@@ -3,7 +3,7 @@
 A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
 ```
 * Cord19 Search App available at: [http://localhost:5000/](http://localhost:5000/)
-* Documents retrieved with Pyterrier from the [Cord19 Data Set](https://github.com/allenai/cord19)
+* Documents Retrieval with STELLA and the [Cord19 Data Set](https://github.com/allenai/cord19)
 * Automated Logging enabled with [LogUI](https://github.com/logui-framework) available at: [http://localhost:8000/](http://localhost:8000/)
 * Alternative Logging enabled with [Big Brother](https://github.com/hscells/bigbro)  
 
