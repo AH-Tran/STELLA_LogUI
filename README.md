@@ -59,12 +59,12 @@ Create user account
 ```
 cd scripts
 ./create_user.sh your_user_name
-´´´
+```
 
 Stop LogUI Server
 ```
 docker-compose -p logui down
-´´´
+```
 
 ## Important Scripts
 Placeholder
