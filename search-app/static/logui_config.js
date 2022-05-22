@@ -133,159 +133,270 @@ function startLogUIClient() {
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT1_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT1_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT1_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
-                        includeValues:  [
-                            {
-                                nameForLog: 'IR_TYPE',
-                                sourcer: 'elementAttribute',
-                                selector: '#result-1',
-                                lookFor: 'ir_type',
-                            }
-                        ],
-
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result2-click': { // Mapping name (between element(s) and event)
                     selector: '#result-2',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT2_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT2_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT2_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result3-click': { // Mapping name (between element(s) and event)
                     selector: '#result-3',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT3_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT3_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT3_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result4-click': { // Mapping name (between element(s) and event)
                     selector: '#result-4',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT4_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT4_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT4_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result5-click': { // Mapping name (between element(s) and event)
                     selector: '#result-5',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT5_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT5_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT5_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result6-click': { // Mapping name (between element(s) and event)
                     selector: '#result-6',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT6_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT6_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT6_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result7-click': { // Mapping name (between element(s) and event)
                     selector: '#result-7',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT7_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT7_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT7_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result8-click': { // Mapping name (between element(s) and event)
                     selector: '#result-8',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT8_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT8_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT8_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result9-click': { // Mapping name (between element(s) and event)
                     selector: '#result-9',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT9_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT9_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT9_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'result10-click': { // Mapping name (between element(s) and event)
                     selector: '#result-10',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
                     properties: {
                         primary: {
-                            name: 'RESULT10_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         secondary: {
-                            name: 'RESULT10_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                         auxiliary: {
-                            name: 'RESULT10_MOUSE_CLICK',
+                            name: 'RESULT_MOUSE_CLICK',
                         },
                     },
+                    metadata: [
+                        {
+                            nameForLog: 'IR_TYPE',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'ir_type',
+                        },
+                        {
+                            nameForLog: 'RANK',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'result_rank',
+                        },
+                    ],
                 },
                 'title-click': { // Mapping name (between element(s) and event)
                     selector: '#article-title',  // Selector: id(#), class(.)
