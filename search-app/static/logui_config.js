@@ -27,6 +27,8 @@ function startLogUIClient() {
                 condition: 'STELLA_Pyterrier',
             },
             trackingConfiguration: {
+                /*
+                // SEARCH BAR CLICKS
                 'searchbar-click': { // Mapping name (between element(s) and event)
                     selector: '#search-bar',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
@@ -56,7 +58,7 @@ function startLogUIClient() {
                             name: 'ADVSEARCH_AUX_MOUSE_CLICK',
                         },
                     },
-                },
+                },*/
                 'scroll-mousemovements': {
                     selector: '*',
                     event: 'scrollable',
@@ -69,6 +71,7 @@ function startLogUIClient() {
                         },
                     },
                 },
+                // QUERY SUBMISSIONS THROUGH SEARCHBARS
                 'normal-query-submission': { // NORMAL SEARCH BAR
                     selector: '#search-bar',
                     event: 'formSubmission',
@@ -109,14 +112,21 @@ function startLogUIClient() {
                                 lookFor: 'value',
                             },
                             {
-                                nameForLog: 'radioNone', //RADIO INPUT
-                                sourcer: 'elementProperty',
-                                selector: '.searchbar-advanced-radio',
-                                lookFor: 'name',
+                                nameForLog: 'yearValue', //RADIO YEAR INPUT
+                                sourcer: 'elementAttribute',
+                                selector: '#searchbar-advanced-radio-id input:checked',
+                                lookFor: 'value',
+                            },
+                            {
+                                nameForLog: 'tagValue', //CHECKBOX TAG INPUT
+                                sourcer: 'elementAttribute',
+                                selector: '#searchbar-advanced-checkbox-id input:checked',
+                                lookFor: 'value',
                             },
                         ]
                     }
                 },
+                /*
                 'radio-click-primary': {  // RADIO CLICK
                     selector: '#radio-none',
                     event: 'mouseClick',
@@ -125,7 +135,8 @@ function startLogUIClient() {
                             name: 'RADIO_MOUSE_CLICK',
                         },
                     },
-                },
+                },*/
+                // SERP CLICK BEHAVIOUR TRACKING
                 'result1-click': { // Mapping name (between element(s) and event)
                     selector: '#result-1',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
@@ -348,6 +359,81 @@ function startLogUIClient() {
                         },
                         auxiliary: {
                             name: 'METADATA_MOUSE_CLICK',
+                        },
+                    },
+                },
+                'github-click': { // Mapping name (between element(s) and event)
+                    selector: '#github-ext',  // Selector: id(#), class(.)
+                    event: 'mouseClick',// Event (clicks, forms, etc)
+                    properties: {
+                        primary: {
+                            name: 'GITHUB_MOUSE_CLICK',
+                        },
+                        secondary: {
+                            name: 'GITHUB_MOUSE_CLICK',
+                        },
+                        auxiliary: {
+                            name: 'GITHUB_MOUSE_CLICK',
+                        },
+                    },
+                },
+                'stella-click': { // Mapping name (between element(s) and event)
+                    selector: '#stella-ext',  // Selector: id(#), class(.)
+                    event: 'mouseClick',// Event (clicks, forms, etc)
+                    properties: {
+                        primary: {
+                            name: 'STELLA_MOUSE_CLICK',
+                        },
+                        secondary: {
+                            name: 'STELLA_MOUSE_CLICK',
+                        },
+                        auxiliary: {
+                            name: 'STELLA_MOUSE_CLICK',
+                        },
+                    },
+                },
+                'logui-click': { // Mapping name (between element(s) and event)
+                    selector: '#logui-ext',  // Selector: id(#), class(.)
+                    event: 'mouseClick',// Event (clicks, forms, etc)
+                    properties: {
+                        primary: {
+                            name: 'LOGUI_MOUSE_CLICK',
+                        },
+                        secondary: {
+                            name: 'LOGUI_MOUSE_CLICK',
+                        },
+                        auxiliary: {
+                            name: 'LOGUI_MOUSE_CLICK',
+                        },
+                    },
+                },
+                'bigbro-click': { // Mapping name (between element(s) and event)
+                    selector: '#bigbro-ext',  // Selector: id(#), class(.)
+                    event: 'mouseClick',// Event (clicks, forms, etc)
+                    properties: {
+                        primary: {
+                            name: 'BIGBRO_MOUSE_CLICK',
+                        },
+                        secondary: {
+                            name: 'BIGBRO_MOUSE_CLICK',
+                        },
+                        auxiliary: {
+                            name: 'BIGBRO_MOUSE_CLICK',
+                        },
+                    },
+                },
+                'cord19-click': { // Mapping name (between element(s) and event)
+                    selector: '#cord19-ext',  // Selector: id(#), class(.)
+                    event: 'mouseClick',// Event (clicks, forms, etc)
+                    properties: {
+                        primary: {
+                            name: 'CORD19_MOUSE_CLICK',
+                        },
+                        secondary: {
+                            name: 'CORD19_MOUSE_CLICK',
+                        },
+                        auxiliary: {
+                            name: 'CORD19_MOUSE_CLICK',
                         },
                     },
                 },
