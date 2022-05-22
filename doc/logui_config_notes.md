@@ -1,18 +1,18 @@
 ## Search Form:
-[] Click: Search
-[] Click: Advanced Search
-[] Fill: rpp Field
-[] Click:radioboxes
-[] Click:checkboxes
-[] query inserted?
+[x] Click: Search
+[x] Click: Advanced Search
+[x] Fill: rpp Field
+[x] Click:radioboxes
+[x] Click:checkboxes
+[x] query inserted?
 
 ## Searchresult related:
-[] Which result clicked
-    [] n1 vs n2~20
-    [] type: EXP or BASE
-[] Time until click
-[] Amount of NO CLICK
-[] No Search Results retrieved -> no_result.html 
+[x] Which result clicked
+    [x] n1 vs n2~20
+    [XX] type: EXP or BASE with metadata sourcer
+[X] Time until click
+[X] Amount of NO CLICK
+[X] No Search Results retrieved -> no_result.html 
 
 ## Metadata:
 [] userid generated

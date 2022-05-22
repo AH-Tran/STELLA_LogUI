@@ -126,8 +126,41 @@ function startLogUIClient() {
                         ]
                     }
                 },
+                /*
+                'radio-click-primary': {  // RADIO CLICK
+                    selector: '#radio-none',
+                    event: 'mouseClick',
+                    properties: {
+                        primary: {
+                            name: 'RADIO_MOUSE_CLICK',
+                        },
+                    },
+                },*/
+                'result-click': {
+                    selector: '#result-panel',
+                    event: 'mouseClick',
+                    properties: {
+                        primary: {
+                            name: 'RESULT1_MOUSE_CLICK',
+                        },
+                    },
+                    metadata: [
+                        {
+                            nameForLog: 'resultRank', //RADIO YEAR INPUT
+                            sourcer: 'elementAttribute',
+                            selector: '#result-panel div:checked',
+                            lookFor: 'result_rank',
+                        },
+                        {
+                            nameForLog: 'irType', //CHECKBOX TAG INPUT
+                            sourcer: 'elementAttribute',
+                            selector: '#result-panel div:checked',
+                            lookFor: 'ir_type',
+                        },
+                    ]
+                },
                 // SERP CLICK BEHAVIOUR TRACKING
-                
+                /*
                 'result1-click': { // Mapping name (between element(s) and event)
                     selector: '#result-1',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)
@@ -287,6 +320,7 @@ function startLogUIClient() {
                         },
                     },
                 },
+                */
                 'title-click': { // Mapping name (between element(s) and event)
                     selector: '#article-title',  // Selector: id(#), class(.)
                     event: 'mouseClick',// Event (clicks, forms, etc)

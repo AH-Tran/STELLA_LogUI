@@ -11,7 +11,7 @@
     {% for key, parent_dict_item in search_results.items() %}
     {% if 'body' in key %}
         {% for key2, nested_value  in parent_dict_item.items() %}
-        <article class="media content-section" id="result-{{ loop.index }}">
+        <article class="media content-section" id="result-{{ loop.index }}" ir_type="{{ nested_value.type }}" result_rank="{{ loop.index }}">
             <div class="media-body">
               <!--- ARTICLE DATA: DOCID, Abstract, Inspect, Bookmark -->
               <h2><a class="article-title" href="#{{ nested_value.docid }}" id="title-{{ loop.index }}_l">DOCID: {{ nested_value.docid }}</a></h2><small class="text-muted" style="display:flex; justify-content: flex-end">{{ loop.index }}</small>
