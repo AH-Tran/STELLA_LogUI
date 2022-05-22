@@ -153,6 +153,21 @@ function startLogUIClient() {
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
                         },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
+                        },
                     ],
                 },
                 'result2-click': { // Mapping name (between element(s) and event)
@@ -179,6 +194,21 @@ function startLogUIClient() {
                             nameForLog: 'RANK',
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
+                        },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
                         },
                     ],
                 },
@@ -207,6 +237,21 @@ function startLogUIClient() {
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
                         },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
+                        },
                     ],
                 },
                 'result4-click': { // Mapping name (between element(s) and event)
@@ -233,6 +278,21 @@ function startLogUIClient() {
                             nameForLog: 'RANK',
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
+                        },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
                         },
                     ],
                 },
@@ -261,6 +321,21 @@ function startLogUIClient() {
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
                         },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
+                        },
                     ],
                 },
                 'result6-click': { // Mapping name (between element(s) and event)
@@ -287,6 +362,21 @@ function startLogUIClient() {
                             nameForLog: 'RANK',
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
+                        },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
                         },
                     ],
                 },
@@ -315,6 +405,21 @@ function startLogUIClient() {
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
                         },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
+                        },
                     ],
                 },
                 'result8-click': { // Mapping name (between element(s) and event)
@@ -341,6 +446,21 @@ function startLogUIClient() {
                             nameForLog: 'RANK',
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
+                        },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
                         },
                     ],
                 },
@@ -369,6 +489,21 @@ function startLogUIClient() {
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
                         },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
+                        },
                     ],
                 },
                 'result10-click': { // Mapping name (between element(s) and event)
@@ -395,6 +530,21 @@ function startLogUIClient() {
                             nameForLog: 'RANK',
                             sourcer: 'elementAttribute',
                             lookFor: 'result_rank',
+                        },
+                        {
+                            nameForLog: 'BASE_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'base_ir',
+                        },
+                        {
+                            nameForLog: 'EXP_NAME',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'exp_ir',
+                        },
+                        {
+                            nameForLog: 'SID',
+                            sourcer: 'elementAttribute',
+                            lookFor: 'sid',
                         },
                     ],
                 },
