@@ -1,0 +1,18 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    {% for document in documents %}
+        <div class ="search-sectopm">
+            <form method="GET" action="">
+                {{ form.hidden_tag()}}
+                <fieldset class ="form-group">
+                    <legend class="border_bottom mb-4">Search Field</legend>
+                    <dir class="form-group">
+                        {{ form.q.label(class="form-control-label") }}
+                        {{ form.q(class="form-control form-control-lg") }}
+                    </dir>
+                </fieldset>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock  content%}

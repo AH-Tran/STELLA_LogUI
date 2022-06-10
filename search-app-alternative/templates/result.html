@@ -1,0 +1,20 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    {% for document in documents %}
+        <article class="media content-section">
+            <div class="media-body">
+              <h2><a class="article-title" href="#">{{ document.title }}</a></h2>
+              <p class="article-content">{{ document.abstract }}</p>
+
+              <!--- -->
+
+
+              <div class="article-metadata" style="display: flex; justify-content: flex-end">
+                <a class="mr-2" href="#">By {{ document.author }}</a>
+                <small class="text-muted">{{ document.date }}</small>
+              </div>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock  content%}
