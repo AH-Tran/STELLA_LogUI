@@ -1,24 +1,37 @@
 {% extends "layout.html" %}
 {% block content %}
+<!-- Container Info-->
+<small class="container-info"><p><b>▻ Search Results</b> for: [ {{ query }} ]
+</small>
+<small id="base-info"><br><b>▻ Info: </b>BASE => [ {{ search_results.header.container.base}} ];
+  EXP => [ {{ search_results.header.container.exp }} ];
+  sid => [ {{ search_results.header.sid }} ]</small>
+  <hr>
+  <!-- Search Result Articles-->
     {% for key, parent_dict_item in search_results.items() %}
     {% if 'body' in key %}
         {% for key2, nested_value  in parent_dict_item.items() %}
-        <article class="media content-section">
+        <article class="media content-section" id="result-{{ loop.index }}" ir_type="{{ nested_value.type }}" result_rank="{{ loop.index }}" base_ir="{{ search_results.header.container.base }}" exp_ir="{{ search_results.header.container.exp }}" sid="{{ search_results.header.sid }}">
             <div class="media-body">
-              <h2><a class="article-title" href="#{{ nested_value.docid }}">DOCID: {{ nested_value.docid }}</a> </h2><small class="text-muted" style="display:flex; justify-content: flex-end">{{ loop.index }}</small>
+              <!--- ARTICLE DATA: DOCID, Abstract, Inspect, Bookmark -->
+              <h2><a class="article-title" href="#{{ nested_value.docid }}" id="title-{{ loop.index }}_l">DOCID: {{ nested_value.docid }}</a></h2><small class="text-muted" style="display:flex; justify-content: flex-end">{{ loop.index }}</small>
               <p class="article-content"><b>ABSTRACT </b>An abstract is a brief summary of a research article, thesis, review, conference proceeding, or any in-depth analysis of a particular subject and is often used to help the reader quickly ascertain the paper's purpose.
-              <a class="media-inspect" href="#">View More...</a> </p>
+              <a class="media-inspect" href="#" id="inspect-{{ loop.index }}_l" style="display:inline-block;margin-right:10px;">View More...</a> <a class="media-bookmark" href="#" id="bookmark-{{ loop.index }}_l" style="display:inline-block;">Bookmark</a> 
+              </p>
               <!--<p><small class="text-muted">{{ nested_value.type }}</small></p> -->
-              <div ><a class="article-tag" href="#" class="fill-div">Covid-19</a></div>
-              <div ><a class="article-tag" href="#" class="fill-div">Disease</a></div>
+              <div ><a class="article-tag" href="#" class="fill-div" id="tag1-{{ loop.index }}_l">Covid-19</a></div>
+              <div ><a class="article-tag" href="#" class="fill-div" id="tag2-{{ loop.index }}_l">Disease</a></div>
               <!--- -->
               
-
-              <div class="article-metadata" style="display: flex; justify-content: flex-end">
-                <a class="mr-2" href="#">By Jeremy Falulah</a>
-                <small class="text-muted">07.03.2019</small>
+              <!--- METADATA -->
+              <div class="article-metadata" style="display: flex; justify-content: flex-end" id="metadata-{{ loop.index }}_l">
+                <a class="mr-2" href="#" id="author-{{ loop.index }}_l">By Jeremy Falulah</a>
+                <small class="text-muted" id="date-{{ loop.index }}_l">07.03.2019 </small>
+                
 
               </div>
+              <!--- SYSTEM -->
+              <small class="text-muted" style="display:flex; justify-content: flex-end" id="type-{{ loop.index }}_l"> {{ nested_value.type }}</small>
             </div>
         </article>
         {% endfor %}

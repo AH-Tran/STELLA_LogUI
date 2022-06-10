@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'cof13dc122a324a46288d7055f02481d6be'
 db_url = "http://localhost:8080"
-rpp = 10 # Default Results per Page
+rpp = 20 # Default Results per Page
 
 @app.context_processor
 def base():
@@ -45,15 +45,24 @@ def result():
     errors = []
     results = {}
     if request.method == "POST":
+        
         url = "/stella/api/v1/ranking?query="
         url_affix = "&rpp="
         query = request.form['query']
         rpp = request.form['rpp']
-        end_query = db_url + url + query + url_affix + rpp
+        if  "submit-box" in request.form:
+            end_query = db_url + url + query + url_affix + rpp
+        if  "submit-box-advanced" in request.form:
+            radio_option = request.form['year-radio']
+            if radio_option == "":
+                end_query = db_url + url + query + url_affix + rpp
+            else:
+                end_query = db_url + url + query + " " + radio_option + url_affix + rpp  
         try:
             response = requests.get(end_query)
         except requests.ConnectionError:
             return "Connection Error" 
+        #print(end_query)
         #response = response.text
         #search_results = json.loads(response)
         search_results = response.json()
@@ -63,10 +72,9 @@ def result():
     #print(search_results["body"]["1"]["docid"])
         #search_results_dict = json.loads(search_results)
         #return search_results
-        return render_template("search.html", title="Search Results", search_results = search_results)
+        return render_template("search.html", title="Search Results", search_results = search_results, query=query)
     else:
         return render_template("no_result.html", title="No Results found")
-
 
 @app.route("/document")
 def document():
