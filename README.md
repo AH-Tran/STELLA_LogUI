@@ -79,9 +79,9 @@ Both STELLA and the LogUI Control App might want to occupy the same port :8000, 
 On further hinsight, it would be interesting to pursue additional interactive dashboarding tools to complement LogUI's and Big Brother's consistent logging features. With that, one could realistically create a live analytics dashboard, where new user interaction data is constantly fed into the dashboard, enabling researchers to observe and follow a user's journey in real time.
 
 ## Sources
-[STELLA](https://stella-project.org/)
+[STELLA](https://stella-project.org/)  
 [LogUI](https://github.com/logui-framework)  
-[Big Brother](https://github.com/hscells/bigbro)
+[Big Brother](https://github.com/hscells/bigbro)  
 
 ## Acknowledgements
 Many thanks to Timo Breuer and the Information Retrieval Research Group for developing and providing the STELLA Infrastructure for this thesis, with which it was possible to integrate logging frameworks in a readily available living lab environment.
