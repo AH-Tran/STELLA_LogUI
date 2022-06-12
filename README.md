@@ -60,7 +60,7 @@ For setting up LogUI, consult its excellent documentation:
 
 For setting up the Big Brother server and refer to the Github README for further info: [Big Bro README](https://github.com/hscells/bigbro)
 ```
-$ go install github.com/hscells/bigbro/cmd/bigbro
+go install github.com/hscells/bigbro/cmd/bigbro
 ```
 
 ### Getting Started
