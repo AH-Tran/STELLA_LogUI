@@ -10,7 +10,7 @@ A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 ## Cord19 Search App
 ![image info](./img/search_app.png)
 
-## Video DEMO:
+## Video DEMO
 
 | LOGUI and STELLA DEMO |
 | ----------- | 
