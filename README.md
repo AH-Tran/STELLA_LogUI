@@ -15,7 +15,7 @@ A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
 | LOGUI and STELLA DEMO |
 | ----------- | 
 |[![LOGUI with STELLA DEMO](./resources/yasbil-youtube-sigir21.png)](https://www.youtube.com/watch?v=D47EbID5j14 "")|
-[![Watch the video](./img/logui_videothumbnail.jpg)](https://youtu.be/nTQUwghvy5Q)
+[![Watch the video](./img/logui_videothumbnail.jpg)](https://www.youtube.com/watch?v=D47EbID5j14)
 
 ## Table of contents
 - [Prerequisites](#rerequisites)
