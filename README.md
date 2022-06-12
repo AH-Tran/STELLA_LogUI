@@ -90,7 +90,7 @@ python search_app.py
 Access the Search app at [http://localhost:5000/](http://localhost:5000/) and start logging.
 
 ### Troubleshooting
-Both STELLA and the LogUI Control App might want to occupy the same port :8000, forcing the user to reconsider either STELLA's docker-compose definition or LogUI's.
+Both the STELLA Dashboard and the LogUI Control App might want to occupy the same port localhost:8000 by default. Consider changing the port of via either STELLA's docker-compose file or LogUI's docker-compose file.
 
 ## Further Research
 On further hinsight, it would be interesting to pursue additional interactive dashboarding tools to complement LogUI's and Big Brother's consistent logging features. With that, one could realistically create a live analytics dashboard, where new user interaction data is constantly fed into the dashboard, enabling researchers to observe and follow a user's journey in real time.
