@@ -66,7 +66,7 @@ go install github.com/hscells/bigbro/cmd/bigbro
 ```
 
 ### Getting Started
-1. Start from root-directory
+1. Start from the repository's root-directory 
 
 2. Run STELLA:
 ```
