@@ -20,6 +20,7 @@ A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 ## Table of contents
 - [Video DEMO](#video-demo)
 - [Prerequisites](#prerequisites)
+- [Repository structure](#repository-structure)
 - [How to use](#how-to-use)
   - [Installation](#installation)
   - [Getting Started](#getting-started)
@@ -38,6 +39,12 @@ A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 * Go / Golang
 
 Recommended and tested under Ubuntu 20.04
+
+#### Repository structure
+* `logui-server\`: Set-up folder for the LogUI framework
+* `stella-app\`: Set-up folder for the STELLA APP
+* `search-app\`: Flask implementation of the Cord19 Search App with LogUI integration 
+*  `search-app\`: Flask implementation of the Cord19 Search App with Big Brother integration 
 
 ## How to use
 1. In order to fully utilize this repository, it is recommmended to set up the STELLA APP, Big Brother Server and the LogUI Server first before running the Flask Search Apps.  
