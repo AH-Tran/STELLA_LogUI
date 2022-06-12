@@ -1,16 +1,16 @@
 # Integration of Logging Frameworks into the STELLA Infrastructure
 ```
-A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
+A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 ```
 * Cord19 Search App available at: [http://localhost:5000/](http://localhost:5000/)
-* Document Retrieval with STELLA and the [Cord19 Data Set](https://github.com/allenai/cord19)
+* Document Retrieval with [STELLA](https://github.com/stella-project) and the [Cord19 Data Set](https://github.com/allenai/cord19)
 * Automated Logging enabled with [LogUI](https://github.com/logui-framework) available at: [http://localhost:8000/](http://localhost:8000/)
 * Alternative Logging enabled with [Big Brother](https://github.com/hscells/bigbro)  
 
 ## Cord19 Search App
 ![image info](./img/search_app.png)
 
-## Videos:
+## Video DEMO:
 
 | LOGUI and STELLA DEMO |
 | ----------- | 
@@ -18,6 +18,7 @@ A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
 |[![Watch the video](./img/logui_videothumbnail.jpg)](https://www.youtube.com/watch?v=D47EbID5j14)|
 
 ## Table of contents
+- [Video DEMO](#video-demo)
 - [Prerequisites](#prerequisites)
 - [How to use](#how-to-use)
   - [Installation](#installation)
