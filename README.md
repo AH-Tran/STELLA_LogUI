@@ -32,7 +32,7 @@ A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 
 ## Prerequisites:  
 * Python >= 3.6
-* Java 11 or higher
+* Java >= 11
 * Docker
 * Docker-compose
 * Go / Golang
@@ -60,7 +60,7 @@ For setting up LogUI, consult its excellent documentation:
 [First Run Client Guide](https://github.com/logui-framework/client/wiki/Quick-Start-Guide)
 
 
-For setting up the Big Brother server and refer to the Github README for further info: [Big Bro README](https://github.com/hscells/bigbro)
+For setting up the Big Brother server, use this command and refer to the BigBro's README for further info and extra tools: [Big Bro README](https://github.com/hscells/bigbro)
 ```
 go install github.com/hscells/bigbro/cmd/bigbro
 ```
