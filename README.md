@@ -14,8 +14,8 @@ A Flask Search App integrated with STELLA and logged by LogUI and BigBrother
 
 | LOGUI and STELLA DEMO |
 | ----------- | 
-|[![LOGUI with STELLA DEMO](./resources/yasbil-youtube-sigir21.png)](https://www.youtube.com/watch?v=D47EbID5j14 "")|
-[![Watch the video](./img/logui_videothumbnail.jpg)](https://www.youtube.com/watch?v=D47EbID5j14)
+|[LOGUI with STELLA DEMO](https://www.youtube.com/watch?v=D47EbID5j14 "")|
+|[![Watch the video](./img/logui_videothumbnail.jpg)](https://www.youtube.com/watch?v=D47EbID5j14)|
 
 ## Table of contents
 - [Prerequisites](#rerequisites)
@@ -69,13 +69,17 @@ docker-compose -f stella-app/yml/pyterrier.yml up -d
 Run LogUI Server and LogUI Control App:
 ```
 cd logui-server
+```
+```
 docker-compose -p logui up
 ```
 
 Run the respective flask via
 ```
 cd search-app
-python search-app.py
+```
+```
+python search_app.py
 ```
 Access the Search app at [http://localhost:5000/](http://localhost:5000/) and start logging.
 
