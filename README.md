@@ -30,14 +30,14 @@ A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 
 
 
-## Prerequisites:  
+## Prerequisites
 * Python >= 3.6
 * Java >= 11
 * Docker
 * Docker-compose
 * Go / Golang
 
-Tested under Ubuntu 20.04
+Recommended and tested under Ubuntu 20.04
 
 ## How to use
 1. In order to fully utilize this repository, it is recommmended to set up the STELLA APP, Big Brother Server and the LogUI Server first before running the Flask Search Apps.  
