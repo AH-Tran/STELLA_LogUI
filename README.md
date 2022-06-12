@@ -51,22 +51,26 @@ For the basic flask requirements:
 pip3 install -r requirements.txt
 ```
 
-For setting up the STELLA APP, head [over here](https://stella-project.org/stella-documentation/guides/pyterrier/)
+For setting up the STELLA APP, refer to the documentation over here: [STELLA Pyterrier Doc](https://stella-project.org/stella-documentation/guides/pyterrier/)
 
-For setting up the LogUI server, consult its excellent documentation [over here](https://github.com/logui-framework/server)
+For setting up LogUI, consult its excellent documentation:
+[First Run Server Guide](https://github.com/logui-framework/server/wiki/First-Run-Guide) |
+[First Run Client Guide](https://github.com/logui-framework/client/wiki/Quick-Start-Guide)
 
-For setting up the Big Brother server:
+
+For setting up the Big Brother server and refer to the Github README for further info: [Big Bro README](https://github.com/hscells/bigbro)
 ```
 $ go install github.com/hscells/bigbro/cmd/bigbro
 ```
 
 ### Getting Started
+1. Start from root-directory
 
-Run STELLA:
+2. Run STELLA:
 ```
 docker-compose -f stella-app/yml/pyterrier.yml up -d
 ```
-Run LogUI Server and LogUI Control App:
+3. Run LogUI Server and LogUI Control App:
 ```
 cd logui-server
 ```
@@ -74,7 +78,7 @@ cd logui-server
 docker-compose -p logui up
 ```
 
-Run the respective flask via
+4. Run the respective flask via
 ```
 cd search-app
 ```
