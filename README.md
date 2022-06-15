@@ -1,4 +1,4 @@
-# Integration of Logging Frameworks into the STELLA Infrastructure
+# Integration of a Logging Component into the STELLA Infrastructure
 ```
 A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 ```
