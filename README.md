@@ -98,7 +98,7 @@ Access the Search app at [http://localhost:5000/](http://localhost:5000/) and st
 ### Troubleshooting
 1. Both the STELLA Dashboard and the LogUI Control App might want to occupy the same port localhost:8000 by default. Consider changing the port of either via STELLA's docker-compose file or LogUI's docker-compose file.   
 
-2. When installing Go: Make sure that Go's installation directory AND Go's `$GOPATH` variable are added to your system's `$PATH` environment variable, otherwise, bigbro commands might not be recognized. In Ubuntu 20.04, this done by doing the following:  
+2. When installing Go: Make sure that Go's installation directory AND Go's `$GOPATH` variable are added to your system's `$PATH` environment variable. Otherwise, bigbro commands might not be recognized. In Ubuntu 20.04, this is done by doing the following:  
 
 Open the `bashrc` file:
 ```
