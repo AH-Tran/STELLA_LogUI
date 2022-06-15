@@ -50,7 +50,7 @@ Recommended and tested under Ubuntu 20.04
 1. In order to fully utilize this repository, it is recommended to **set up and start** the `STELLA APP`, `Big Brother` server and the `LogUI` server first before running the Flask Search App.  
 2. Once they do, running the Flask Search App will automatically initiate either the LogUI or the Big Brother Client upon the first full DOM model load. For this purpose, the repository offers two types of search apps:  
     -`search-app` with **LogUI client-side scripting** and `search-app-alternative` for **Big Brother's client-side scripting**
-4. Upon successful websocket connection with their respective servers, LogUI or Big Brother will commence actively logging key user interactions according to their custom event coding configuration.
+4. Upon successful websocket connection with their respective servers, LogUI or Big Brother will commence actively logging key user interactions according to their **custom event coding configuration**.
 
 LogUI's custom event coding is defined in the [configuration object](https://github.com/AH-Tran/STELLA_LogUI/blob/main/search-app/static/logui_config.js), while Big Brother's configuration has been kept very default, making it log pretty much everything.
 ### Installation
@@ -71,7 +71,7 @@ For setting up the Big Brother server, use this command to create a binary go-ex
 go install github.com/hscells/bigbro/cmd/bigbro
 ```
 
-### Getting Started with Logging
+### Getting atarted with Logging
 1. Start from the repository's root-directory 
 
 2. Run STELLA:
@@ -100,11 +100,11 @@ Access the Search app at [http://localhost:5000/](http://localhost:5000/) and st
 
 2. When installing Go: Make sure that Go's installation directory AND Go's `$GOPATH` variable are added to your system's `$PATH` environment variable, otherwise, bigbro commands might not be recognized. In Ubuntu 20.04, this done by doing the following:  
 
-Open the bashrc file:
+Open the `bashrc` file:
 ```
 sudo vi ~/bashrc
 ```
-Add Go's installation directory and `$GOPATH` variable to the end of the bashrc file:
+Add Go's installation directory and `$GOPATH` variable to the end of the `bashrc` file:
 ```
 # SET GO PATH
 export GOPATH="$HOME/go"
@@ -112,7 +112,7 @@ export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
 ```
 
 ## Further Research
-On further hinsight, it would be interesting to pursue additional interactive dashboarding tools to complement LogUI's and Big Brother's consistent logging features. With that, one could realistically create a live analytics dashboard, where new user interaction data is constantly fed into the dashboard, enabling researchers to observe and follow a user's journey in real time.
+On further hindsight, it would be interesting to pursue additional interactive dashboarding tools to complement LogUI's and Big Brother's consistent logging features. With that, one could realistically create a live analytics dashboard, where new user interaction data is constantly fed into the dashboard, enabling researchers to observe and follow a user's journey in real time.
 
 ## Sources
 [STELLA](https://stella-project.org/)  
