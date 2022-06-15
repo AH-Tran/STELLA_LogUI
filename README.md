@@ -87,7 +87,7 @@ docker-compose -p logui up
 ```
 3b. Start Big Brother Server and enable Logging
 ```
-bigbro --filename stella_bigbro.log csv
+bigbro --filename bigbro_data.log csv
 ```
 4. Run the respective Flask app in the folder `\search-app` or `\search-app-alternative`
 ```
