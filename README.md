@@ -71,7 +71,7 @@ For setting up the Big Brother server, use this command to create a binary go-ex
 go install github.com/hscells/bigbro/cmd/bigbro
 ```
 
-### Getting atarted with Logging
+### Getting started with Logging
 1. Start from the repository's root-directory 
 
 2. Run STELLA:
@@ -85,7 +85,7 @@ cd logui-server
 ```
 docker-compose -p logui up
 ```
-3b. Start Big Brother Server and enable Logging
+3b. Start Big Brother Server and enable Logging in CSV format
 ```
 bigbro --filename bigbro_data.log csv
 ```
