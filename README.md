@@ -48,8 +48,9 @@ Recommended and tested under Ubuntu 20.04
 
 ## How to use
 1. In order to fully utilize this repository, it is recommended to **set up and start** the `STELLA APP`, `Big Brother` server and the `LogUI` server first before running the Flask Search App.  
-2. Once they do, running the Flask Search App will automatically initiate either the LogUI or the Big Brother Client upon the first full DOM model load. For this purpose, the repository offers two types of search apps:  
-    -`search-app` with **LogUI client-side scripting** and `search-app-alternative` for **Big Brother's client-side scripting**
+2. Once they do, running the Flask Search App will automatically initiate either the LogUI or the Big Brother client upon the first full DOM model load. For this purpose, the repository offers two types of search apps:  
+    - `search-app` with **LogUI client-side scripting** 
+    - `search-app-alternative` for **Big Brother's client-side scripting**
 4. Upon successful websocket connection with their respective servers, LogUI or Big Brother will commence actively logging key user interactions according to their **custom event coding configuration**.
 
 LogUI's custom event coding is defined in the [configuration object](https://github.com/AH-Tran/STELLA_LogUI/blob/main/search-app/static/logui_config.js), while Big Brother's configuration has been kept very default, making it log pretty much everything.
@@ -60,13 +61,13 @@ For the basic Flask requirements:
 pip install -r requirements.txt
 ```
 
-For setting up the STELLA APP, refer to the documentation over here: [STELLA Pyterrier Doc](https://stella-project.org/stella-documentation/guides/pyterrier/)
+For setting up the `STELLA APP`, refer to the documentation over here: [STELLA Pyterrier Doc](https://stella-project.org/stella-documentation/guides/pyterrier/)
 
-For setting up LogUI, consult its excellent documentation:
+For setting up `LogUI`, consult its excellent documentation:
 [First Run Server Guide](https://github.com/logui-framework/server/wiki/First-Run-Guide) |
 [First Run Client Guide](https://github.com/logui-framework/client/wiki/Quick-Start-Guide)
 
-For setting up the Big Brother server, use this command to create a binary go-executable and refer to the BigBro's README for further info and extra tools such as inbuilt heat maps: [Big Bro README](https://github.com/hscells/bigbro)
+For setting up the `Big Brother` server, use this command to create a binary go-executable and refer to the BigBro's README for further info and extra tools such as inbuilt heat maps: [Big Bro README](https://github.com/hscells/bigbro)
 ```
 go install github.com/hscells/bigbro/cmd/bigbro
 ```
@@ -74,18 +75,18 @@ go install github.com/hscells/bigbro/cmd/bigbro
 ### Getting started with Logging
 1. Start from the repository's root-directory 
 
-2. Run STELLA:
+2. Run `STELLA`:
 ```
 docker-compose -f stella-app/yml/pyterrier.yml up -d
 ```
-3a. Start LogUI Server and LogUI Control App:
+3a. Start `LogUI` Server and `LogUI` Control App:
 ```
 cd logui-server
 ```
 ```
 docker-compose -p logui up
 ```
-3b. Start Big Brother Server and enable Logging in CSV format
+3b. Start `Big Brother` Server and enable Logging in `CSV` format
 ```
 bigbro --filename bigbro_data.log csv
 ```
@@ -96,13 +97,13 @@ python search_app.py
 Access the Search app at [http://localhost:5000/](http://localhost:5000/) and start logging.
 
 ### Troubleshooting
-1. Both the STELLA Dashboard and the LogUI Control App might want to occupy the same port localhost:8000 by default. Consider changing the port of either via STELLA's docker-compose file or LogUI's docker-compose file.   
+1. Both the `STELLA` Dashboard and the `LogUI` Control App might want to occupy the same port localhost:8000 by default. Consider changing the port of either via `STELLA`'s docker-compose file or `LogUI`'s docker-compose file.   
 
 2. When installing Go: Make sure that Go's installation directory AND Go's `$GOPATH` variable are added to your system's `$PATH` environment variable. Otherwise, bigbro commands might not be recognized. In Ubuntu 20.04, this is done by doing the following:  
 
 Open the `bashrc` file:
 ```
-sudo vi ~/bashrc
+vi ~/.bashrc
 ```
 Add Go's installation directory and `$GOPATH` variable to the end of the `bashrc` file:
 ```
@@ -110,7 +111,10 @@ Add Go's installation directory and `$GOPATH` variable to the end of the `bashrc
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
 ```
-
+Execute the new changes:
+```
+source ~/.bashrc
+```
 ## Further Research
 On further hindsight, it would be interesting to pursue additional interactive dashboarding tools to complement LogUI's and Big Brother's consistent logging features. With that, one could realistically create a live analytics dashboard, where new user interaction data is constantly fed into the dashboard, enabling researchers to observe and follow a user's journey in real time.
 
