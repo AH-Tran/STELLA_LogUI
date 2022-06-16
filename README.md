@@ -7,6 +7,8 @@ A Flask Search App integrated with STELLA APP and logged by LogUI and BigBrother
 * Automated Logging enabled with [LogUI](https://github.com/logui-framework) available at: [http://localhost:8000/](http://localhost:8000/)
 * Alternative Logging enabled with [Big Brother](https://github.com/hscells/bigbro)  
 
+This repository is part of the bachelor thesis: *Integration of a Logging Component into the STELLA Infrastructure*
+
 ## Cord19 Search App
 ![image info](./img/search_app.png)
 
