@@ -101,11 +101,11 @@ Access the Search app at [http://localhost:5000/](http://localhost:5000/) and st
 
 2. When installing Go: Make sure that Go's installation directory AND Go's `$GOPATH` variable are added to your system's `$PATH` environment variable. Otherwise, bigbro commands might not be recognized. In Ubuntu 20.04, this is done by doing the following:  
 
-Open the `bashrc` file:
+Open the `.bashrc` file:
 ```
 vi ~/.bashrc
 ```
-Add Go's installation directory and `$GOPATH` variable to the end of the `bashrc` file:
+Add Go's installation directory and `$GOPATH` variable to the end of the `.bashrc` file:
 ```
 # SET GO PATH
 export GOPATH="$HOME/go"
@@ -124,7 +124,7 @@ On further hindsight, it would be interesting to pursue additional interactive d
 [Big Brother](https://github.com/hscells/bigbro)  
 
 ## Acknowledgements
-Many thanks to Timo Breuer and the Information Retrieval Research Group for developing and providing the STELLA Infrastructure for this thesis, with which it was possible to integrate logging frameworks in a readily available living lab environment.
+Many thanks to Timo Breuer and the [Information Retrieval Research Group](https://ir.web.th-koeln.de/index.html) for developing and providing the STELLA Infrastructure for this thesis, with which it was possible to integrate logging frameworks in a readily available living lab environment.
 
 Another thanks to David Maxwell for developing and providing the LogUI framework, but also the very detailed LogUI documentation, with which it became easier to integrate LogUI into the STELLA framework and troubleshoot problems in case of unforeseen errors.
 
